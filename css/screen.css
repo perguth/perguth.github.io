@@ -47,18 +47,12 @@ p {
 .teaser {
   font-weight: 400;
 }
-.find-me {
+.find-me a {
   margin-top: 11px;
   color: grey;
   opacity: 0.4;
 }
-img {
-  margin: 0 2px;
-  vertical-align: middle;
-  height: 19px;
-  color: grey;
-}
-img:hover {
+.find-me a:hover {
   opacity: 1;
   transition: 0.3s;
 }
