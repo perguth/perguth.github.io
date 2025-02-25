@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Bookable (non-public)</title>
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookable (non-public)</title>
   <style>
     body {
       display: flex;
@@ -62,11 +61,14 @@
       align-items: center;
     }
 
+  .link a span {
+      display: inline-block;
+    }
+
   .link a::after {
       content: '\2192';
       margin-left: 0.3em;
       transition: margin-left 0.2s ease;
-      /* Add transition to the arrow */
     }
 
   .link a:hover::after {
@@ -130,8 +132,8 @@
       <div class="progress"></div>
     </div>
     <p class="link">
-      <a href="https://calendar.app.google/4Bkuyqmdzg9hsSa56" target="_blank">Open Calendar Now</a>
-    </p>
+      <a href="https://calendar.app.google/4Bkuyqmdzg9hsSa56" target="_blank"><span>Open Calendar Now</span></a>
+      </p>
   </main>
 
   <footer class="footer">
@@ -167,5 +169,6 @@
 
     requestAnimationFrame(animate);
   </script>
+
 </body>
 </html>
