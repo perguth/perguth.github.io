@@ -1,174 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bookable (non-public)</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: sans-serif;
-      background-color: #f0f0f0;
-    }
+<title>Bookable (non-public)</title>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+  }
 
-  .card {
-      background-color: white;
-      padding: 2em 3em;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
+.card {
+    background-color: white;
+    padding: 2em 3em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
 
-    h1 {
-      font-size: 1em;
-      color: #555;
-      margin-bottom: 0.8em;
-      font-weight: bold;
-    }
+  h1 {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 0.8em;
+    font-weight: bold;
+  }
 
-  .progress-bar {
-      width: 12em;
-      height: 0.8em;
-      background-color: #eee;
-      border-radius: 10px;
-      margin: 0 auto 1.5em;
-      position: relative;
-      overflow: hidden;
-    }
+.progress-bar {
+    width: 12em;
+    height: 0.8em;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 0 auto 1.5em;
+    position: relative;
+    overflow: hidden;
+  }
 
-  .progress {
-      position: absolute;
-      height: 100%;
-      background-color: #3498db;
-      width: 0;
-      border-radius: 10px;
-      transition: width 0.25s linear;
-    }
+.progress {
+    position: absolute;
+    height: 100%;
+    background-color: #3498db;
+    width: 0;
+    border-radius: 10px;
+    transition: width 0.25s linear;
+  }
 
-  .link {
-      margin-top: 1em;
-    }
+.link {
+    margin-top: 1em;
+  }
 
-  .link a {
-      color: #3498db;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-    }
+.link a {
+    color: #3498db;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: margin-left 0.2s ease;
+  }
 
-  .link a span {
-      display: inline-block;
-    }
+.link a::after {
+    content: '\2192';
+    margin-left: 0.3em;
+  }
 
-  .link a::after {
-      content: '\2192';
-      margin-left: 0.3em;
-      transition: margin-left 0.2s ease;
-    }
+.link a:hover::after {
+    margin-left: 0.5em;
+  }
 
-  .link a:hover::after {
-      margin-left: 0.5em;
-    }
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: white; /* Set background color to white */
+  }
 
-  .footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 1rem;
-      font-size: 0.875rem;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      background-color: white;
-    }
+.footer:hover {
+    opacity: 1;
+  }
 
-  .footer:hover {
-      opacity: 1;
-    }
+.thingy-link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+  }
 
-  .thingy-link {
-      color: inherit;
-      text-decoration: none;
-      font-weight: 500;
-    }
+.thingy-link:hover {
+    text-decoration: underline;
+  }
 
-  .thingy-link:hover {
-      text-decoration: underline;
-    }
+.github-link {
+    display: flex;
+    align-items: center;
+  }
 
-  .github-link {
-      display: flex;
-      align-items: center;
-    }
+.github-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.25rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
 
-  .github-icon {
-      width: 16px;
-      height: 16px;
-      margin-left: 0.25rem;
-      opacity: 0.8;
-      transition: opacity 0.2s;
-    }
-
-  .github-icon:hover {
-      opacity: 1;
-    }
-  </style>
+.github-icon:hover {
+    opacity: 1;
+  }
+</style>
 </head>
-
 <body>
 
-  <main class="card">
-    <h1>Forwarding to calendar...</h1>
-    <div class="progress-bar">
-      <div class="progress"></div>
-    </div>
-    <p class="link">
-      <a href="https://calendar.app.google/4Bkuyqmdzg9hsSa56" target="_blank"><span>Open Calendar Now</span></a>
-      </p>
-  </main>
+<main class="card">
+  <h1>Forwarding to calendar...</h1>
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+  <p class="link">
+    <a href="https://calendar.app.google/4Bkuyqmdzg9hsSa56" target="_blank">Open Calendar Now</a>
+  </p>
+</main>
 
-  <footer class="footer">
-    <a href="https://github.com/thingylabs/chrome-new-tab-timezones" class="github-link" target="_blank">
-      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
-        class="github-icon">
-    </a>
-    <span>Built with</span>
-    <span class="thingy-bolt">⚡</span>
-    <span>by</span>
-    <a href="https://thingylabs.io" class="thingy-link" target="_blank">Thingylabs</a>
-  </footer>
+<footer class="footer">
+  <a href="https://github.com/thingylabs/chrome-new-tab-timezones" class="github-link" target="_blank">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
+  </a>
+  <span>Built with</span>
+  <span class="thingy-bolt">⚡</span>
+  <span>by</span>
+  <a href="https://thingylabs.io" class="thingy-link" target="_blank">Thingylabs</a>
+</footer>
 
-  <script>
-    let progress = document.querySelector('.progress');
-    let width = 0;
-    let startTime = null;
-    const duration = 250;
+<script>
+  let progress = document.querySelector('.progress');
+  let width = 0;
+  let startTime = null;
+  const duration = 250;
 
-    function animate(timestamp) {
-      if (!startTime) startTime = timestamp;
-      const progressTime = timestamp - startTime;
-      const progressPercent = Math.min((progressTime / duration) * 100, 100);
-      width = progressPercent;
-      progress.style.width = width + '%';
+  function animate(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progressTime = timestamp - startTime;
+    const progressPercent = Math.min((progressTime / duration) * 100, 100);
+    width = progressPercent;
+    progress.style.width = width + '%';
 
-      if (progressPercent < 100) {
-        requestAnimationFrame(animate);
-      } else {
-        window.location.href = "https://calendar.app.google/4Bkuyqmdzg9hsSa56";
-      }
+    if (progressPercent < 100) {
+      requestAnimationFrame(animate);
+    } else {
+      window.location.href = "https://calendar.app.google/4Bkuyqmdzg9hsSa56";
     }
+  }
 
-    requestAnimationFrame(animate);
-  </script>
+  requestAnimationFrame(animate);
+</script>
 
 </body>
 </html>
