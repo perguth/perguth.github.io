@@ -38,7 +38,7 @@
     background-color: #3498db;
     width: 0;
     border-radius: 10px;
-    transition: width 0.25s linear; /* Smooth transition */
+    transition: width 0.25s linear;
   }
 
   .message {
@@ -72,17 +72,24 @@
 <script>
   let progress = document.getElementById('progress');
   let width = 0;
-  let interval = setInterval(frame, 2.5); // Adjust speed with interval.
+  let startTime = null;
+  const duration = 250; // Total duration in milliseconds, same as the timeout.
 
-  function frame() {
-    if (width >= 100) {
-      clearInterval(interval);
-      window.location.href = "https://calendar.app.google/4Bkuyqmdzg9hsSa56";
+  function animate(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progressTime = timestamp - startTime;
+    const progressPercent = Math.min((progressTime / duration) * 100, 100); //Ensure it doesnt exceed 100%
+    width = progressPercent;
+    progress.style.width = width + '%';
+
+    if (progressPercent < 100) {
+      requestAnimationFrame(animate);
     } else {
-      width++;
-      progress.style.width = width + '%';
+      window.location.href = "https://calendar.app.google/4Bkuyqmdzg9hsSa56";
     }
   }
+
+  requestAnimationFrame(animate);
 </script>
 
 </body>
