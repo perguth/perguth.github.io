@@ -51,17 +51,17 @@
 .link a {
     color: #3498db;
     text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    /* Removed transition from here */
+    position: relative;
+    padding-right: 1.2em;
   }
 .link a::after {
     content: '\2192';
-    margin-left: 0.3em;
-    transition: margin-left 0.2s ease; /* Added transition here */
+    position: absolute;
+    right: 0;
+    transition: transform 0.2s ease;
   }
 .link a:hover::after {
-    margin-left: 0.5em;
+    transform: translateX(0.2em);
   }
 .footer {
     position: fixed;
