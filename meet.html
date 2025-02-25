@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Bookable (non-public)</title>
+<meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body {
     display: flex;
@@ -14,7 +16,7 @@
     background-color: #f0f0f0;
   }
 
-  .card {
+.card {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
@@ -22,13 +24,14 @@
     text-align: center;
   }
 
-  .message {
+.message {
     font-size: 16px;
     color: #555;
     margin-bottom: 15px;
+    font-weight: bold;
   }
 
-  #progress-bar {
+.progress-bar {
     width: 200px;
     height: 20px;
     background-color: #eee;
@@ -38,7 +41,7 @@
     overflow: hidden;
   }
 
-  #progress {
+.progress {
     position: absolute;
     height: 100%;
     background-color: #3498db;
@@ -47,11 +50,11 @@
     transition: width 0.25s linear;
   }
 
-  .link {
+.link {
     margin-top: 20px;
   }
 
-  .link a {
+.link a {
     color: #3498db;
     text-decoration: none;
   }
@@ -59,18 +62,18 @@
 </head>
 <body>
 
-<div class="card">
-  <div class="message">Forwarding to calendar...</div>
-  <div id="progress-bar">
-    <div id="progress"></div>
+<main class="card">
+  <h1>Forwarding to calendar...</h1>
+  <div class="progress-bar">
+    <div class="progress"></div>
   </div>
-  <div class="link">
+  <p class="link">
     <a href="https://calendar.app.google/4Bkuyqmdzg9hsSa56" target="_blank">Open Calendar Now</a>
-  </div>
-</div>
+  </p>
+</main>
 
 <script>
-  let progress = document.getElementById('progress');
+  let progress = document.querySelector('.progress');
   let width = 0;
   let startTime = null;
   const duration = 250;
