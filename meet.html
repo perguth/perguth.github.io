@@ -18,7 +18,7 @@
 
 .card {
     background-color: white;
-    padding: 2.1em 3.1em;
+    padding: 2em 3em;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -27,16 +27,16 @@
   h1 {
     font-size: 1em;
     color: #555;
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
     font-weight: bold;
   }
 
 .progress-bar {
-    width: 12.36em;
-    height: 1.236em;
+    width: 12em;
+    height: 0.8em;
     background-color: #eee;
     border-radius: 10px;
-    margin: 0 auto 1.236em;
+    margin: 0 auto 1.5em;
     position: relative;
     overflow: hidden;
   }
@@ -51,7 +51,7 @@
   }
 
 .link {
-    margin-top: 1.236em;
+    margin-top: 1em;
   }
 
 .link a {
@@ -64,11 +64,11 @@
 
 .link a::after {
     content: '\2192';
-    margin-left: 0.31em;
+    margin-left: 0.3em;
   }
 
 .link a:hover::after {
-    margin-left: 0.62em;
+    margin-left: 0.5em;
   }
 </style>
 </head>
@@ -83,6 +83,16 @@
     <a href="https://calendar.app.google/4Bkuyqmdzg9hsSa56" target="_blank">Open Calendar Now</a>
   </p>
 </main>
+
+<footer class="footer">
+  <a href="https://github.com/thingylabs/" class="github-link" target="_blank">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
+  </a>
+  <span>Built with</span>
+  <span class="thingy-bolt">⚡</span>
+  <span>by</span>
+  <a href="https://thingylabs.io" class="thingy-link" target="_blank">Thingylabs</a>
+</footer>
 
 <script>
   let progress = document.querySelector('.progress');
