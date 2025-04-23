@@ -236,7 +236,7 @@
         }
 
         .company-logo img[src="/companies/Guth.global.jpg"] {
-            padding: 4px;
+            padding: 4ssssssssssssssssssssssssssssssspx;
         }
 
         .company-logo img[src="/companies/RewUS-Uni-Stuttgart.jpg"] {
@@ -619,7 +619,142 @@
                 <div class="profile-info">
                     <h1>Per Guth</h1>
                     <p class="headline">Scalable Solutions | Intersection between Dev, Ops & Legal</p>
-                    <div class="status-badge">#OPEN_TO_WORK</div>
+                    <div class="blog-ticker">
+                        <div class="ticker-content">
+                            <!-- This will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <style>
+                        .blog-ticker {
+                            overflow: hidden;
+                            background-color: var(--background-alt);
+                            border: 1px solid var(--border-light);
+                            border-radius: 6px;
+                            padding: 0.75rem 0;
+                            position: relative;
+                            box-shadow: 0 1px 2px var(--shadow);
+                            opacity: 0;
+                            /* Start fully transparent */
+                            animation: fadeIn 0.5s ease-out forwards;
+                            height: 45px;
+                        }
+
+                        .ticker-content {
+                            display: inline-block;
+                            white-space: nowrap;
+                            animation: ticker 60s linear infinite;
+                            /* Much slower animation */
+                            padding-left: 100%;
+                            animation-delay: -30s;
+                            opacity: 0;
+                            animation-fill-mode: forwards;
+                        }
+
+                        .ticker-item {
+                            display: inline-block;
+                            padding: 0 2rem;
+                            color: var(--accent);
+                            font-size: 0.85rem;
+                            font-weight: 500;
+                            text-decoration: none;
+                            position: relative;
+                            max-width: 400px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        .ticker-item:not(:last-child)::after {
+                            position: absolute;
+                            right: 0;
+                            color: var(--text-muted);
+                        }
+
+                        .ticker-item:hover {
+                            text-decoration: underline;
+                            color: var(--text);
+                        }
+
+                        @keyframes fadeIn {
+                            0% {
+                                opacity: 0;
+                            }
+
+                            100% {
+                                opacity: 1;
+                            }
+                        }
+
+                        @keyframes ticker {
+                            0% {
+                                transform: translateX(0);
+                                opacity: 1;
+                                /* Fully visible during movement */
+                            }
+
+                            100% {
+                                transform: translateX(-100%);
+                                opacity: 1;
+                                /* Remain visible */
+                            }
+                        }
+
+                        /* Pause animation on hover */
+                        .blog-ticker:hover .ticker-content {
+                            animation-play-state: paused;
+                        }
+
+                        /* Add gradient fade effects on the sides */
+                        .blog-ticker::before,
+                        .blog-ticker::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            width: 50px;
+                            height: 100%;
+                            z-index: 2;
+                        }
+
+                        .blog-ticker::before {
+                            left: 0;
+                            background: linear-gradient(to right, var(--background-alt), transparent);
+                        }
+
+                        .blog-ticker::after {
+                            right: 0;
+                            background: linear-gradient(to left, var(--background-alt), transparent);
+                        }
+                    </style>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const tickerContent = document.querySelector('.ticker-content');
+
+                            // Fetch the RSS feed
+                            fetch('https://blog.perguth.de/rss.xml')
+                                .then(response => response.text())
+                                .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+                                .then(data => {
+                                    const items = data.querySelectorAll('item');
+                                    let tickerHTML = '';
+
+                                    // Get the 5 most recent posts
+                                    const recentItems = Array.from(items).slice(0, 5);
+
+                                    recentItems.forEach(item => {
+                                        const title = item.querySelector('title').textContent;
+                                        const link = item.querySelector('link').textContent;
+                                        tickerHTML += `<a href="${link}" class="ticker-item" target="_blank" rel="noopener noreferrer">— ${title}</a>`;
+                                    });
+
+                                    // Duplicate items to ensure smooth looping
+                                    tickerContent.innerHTML = tickerHTML + tickerHTML;
+                                })
+                                .catch(error => {
+                                    console.error('Error fetching RSS feed:', error);
+                                    tickerContent.innerHTML = '<span class="ticker-item">— Check out my latest blog posts at blog.perguth.de</span>';
+                                });
+                        });
+                    </script>
 
                     <div class="quick-links">
                         <a href="mailto:mail@perguth.de" class="quick-link">
