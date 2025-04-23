@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Per Guth · Software Engineer · Stuttgart</title>
+    <title>Per Guth · Full-Stack Engineer · Bangkok, Shenzhen, Stuttgart</title>
 
     <meta name="description" content="Per Guth - Scalable Solutions | Intersection between Dev, Ops & Legal">
-    <meta property="og:title" content="Per Guth · Software Engineer">
+    <meta property="og:title" content="Per Guth · Full-Stack Engineer">
     <meta property="og:description" content="Scalable Solutions | Intersection between Dev, Ops & Legal">
     <meta property="og:image" content="/avatar.webp">
     <meta property="og:url" content="https://perguth.de">
@@ -202,27 +202,12 @@
             gap: 1.5rem;
         }
 
-        .experience-item {
-            position: relative;
-            padding-left: 3rem;
-        }
-
-        .experience-item:not(:last-child)::before {
-            content: '';
-            position: absolute;
-            top: 2rem;
-            left: 1rem;
-            width: 2px;
-            height: calc(100% - 1rem);
-            background-color: var(--border);
-        }
-
         .company-logo {
             position: absolute;
             left: 0;
             top: 0;
-            width: 2rem;
-            height: 2rem;
+            width: 48px;
+            height: 48px;
             border-radius: 4px;
             background-color: var(--background-alt);
             display: flex;
@@ -230,7 +215,7 @@
             justify-content: center;
             font-weight: 600;
             color: var(--accent);
-            font-size: 0.75rem;
+            font-size: 1rem;
             border: 1px solid var(--border);
             overflow: hidden;
         }
@@ -241,8 +226,29 @@
             object-fit: cover;
         }
 
+        .experience-item {
+            position: relative;
+            padding-left: 64px;
+            margin-bottom: 1.75rem;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-item:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            top: 48px;
+            left: 24px;
+            width: 2px;
+            height: calc(100% + 1.75rem - 48px);
+            background-color: var(--border);
+        }
+
         .experience-header {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            padding-top: 0.25rem;
         }
 
         .job-title {
@@ -378,6 +384,9 @@
             background-color: var(--background-alt);
             border-radius: 8px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
         }
 
         .link-card:hover {
@@ -404,7 +413,7 @@
             text-decoration: none;
         }
 
-        .link-url:hover {
+        .link-card:hover .link-url {
             text-decoration: underline;
         }
 
@@ -488,13 +497,20 @@
             }
 
             .experience-item {
-                padding-left: 2.5rem;
+                padding-left: 58px;
+                margin-bottom: 1.5rem;
             }
 
             .company-logo {
-                width: 1.5rem;
-                height: 1.5rem;
-                font-size: 0.625rem;
+                width: 40px;
+                height: 40px;
+                font-size: 0.875rem;
+            }
+
+            .experience-item:not(:last-child)::before {
+                top: 40px;
+                left: 20px;
+                height: calc(100% + 1.5rem - 40px);
             }
 
             .links-grid {
@@ -719,420 +735,424 @@
                             <div class="company-logo">
                                 <img src="/companies/Thingylabs.jpg" alt="Thingylabs GmbH logo" onerror="this.parentNode.innerHTML = 'TL'">
                             </div>
+                            <div class
                             <div class="experience-header">
-                                <h3 class="job-title">Full-stack Engineer</h3>
-                                <a href="https://thingylabs.io" class="company-name" target="_blank" rel="noopener noreferrer">Thingylabs GmbH</a>
-                                <p class="job-duration">2022 - 2023 · 1 yr</p>
-                                <p class="job-location">Germany</p>
-                            </div>
-                            <div class="job-description">
-                                <ul>
-                                    <li>Engaged in diverse areas including testing, front-end, back-end development, architecture, and orchestration, with a primary focus on enhancing key platform features.</li>
-                                </ul>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">React.js</span>
-                                <span class="skill-tag">Kubernetes</span>
-                                <span class="skill-tag">Cypress.io</span>
-                                <span class="skill-tag">PostgreSQL</span>
-                                <span class="skill-tag">TypeScript</span>
-                                <span class="skill-tag">Cloud</span>
-                                <span class="skill-tag">Full-Stack Development</span>
-                            </div>
-                        </div>
+                              <h3 class="job-title">Full-stack Engineer</h3>
+                              <a href="https://thingylabs.io" class="company-name" target="_blank" rel="noopener noreferrer">Thingylabs GmbH</a>
+                              <p class="job-duration">2022 - 2023 · 1 yr</p>
+                              <p class="job-location">Germany</p>
+                          </div>
+                          <div class="job-description">
+                              <ul>
+                                  <li>Engaged in diverse areas including testing, front-end, back-end development, architecture, and orchestration, with a primary focus on enhancing key platform features.</li>
+                              </ul>
+                          </div>
+                          <div class="skills-list">
+                              <span class="skill-tag">Node.js</span>
+                              <span class="skill-tag">Docker</span>
+                              <span class="skill-tag">React.js</span>
+                              <span class="skill-tag">Kubernetes</span>
+                              <span class="skill-tag">Cypress.io</span>
+                              <span class="skill-tag">PostgreSQL</span>
+                              <span class="skill-tag">TypeScript</span>
+                              <span class="skill-tag">Cloud</span>
+                              <span class="skill-tag">Full-Stack Development</span>
+                          </div>
+                      </div>
 
-                        <!-- PANTARIS by ETAS GmbH -->
-                        <div class="experience-item">
-                            <div class="company-logo">
-                                <img src="/companies/Bosch-Engineering.jpg" alt="ETAS GmbH logo" onerror="this.parentNode.innerHTML = 'PE'">
-                            </div>
-                            <div class="experience-header">
-                                <h3 class="job-title">Full-stack Engineer</h3>
-                                <a href="https://www.etas.com" class="company-name" target="_blank" rel="noopener noreferrer">PANTARIS by ETAS GmbH</a>
-                                <p class="job-duration">Apr 2017 - Jan 2022 · 4 yrs 10 mos</p>
-                                <p class="job-location">Germany</p>
-                            </div>
-                            <div class="job-description">
-                                <ul>
-                                    <li>Served as principal engineer, evolving an initial prototype into a full-scale production system.</li>
-                                    <li>Oversaw design, testing, front-end, back-end, architecture, and orchestration, focusing on key platform features.</li>
-                                </ul>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">React.js</span>
-                                <span class="skill-tag">Kubernetes</span>
-                                <span class="skill-tag">Cypress.io</span>
-                                <span class="skill-tag">PostgreSQL</span>
-                                <span class="skill-tag">TypeScript</span>
-                                <span class="skill-tag">Cloud</span>
-                                <span class="skill-tag">Full-Stack Development</span>
-                            </div>
-                        </div>
+                      <!-- PANTARIS by ETAS GmbH -->
+                      <div class="experience-item">
+                          <div class="company-logo">
+                              <img src="/companies/Bosch-Engineering.jpg" alt="ETAS GmbH logo" onerror="this.parentNode.innerHTML = 'PE'">
+                          </div>
+                          <div class="experience-header">
+                              <h3 class="job-title">Full-stack Engineer</h3>
+                              <a href="https://www.etas.com" class="company-name" target="_blank" rel="noopener noreferrer">PANTARIS by ETAS GmbH</a>
+                              <p class="job-duration">Apr 2017 - Jan 2022 · 4 yrs 10 mos</p>
+                              <p class="job-location">Germany</p>
+                          </div>
+                          <div class="job-description">
+                              <ul>
+                                  <li>Served as principal engineer, evolving an initial prototype into a full-scale production system.</li>
+                                  <li>Oversaw design, testing, front-end, back-end, architecture, and orchestration, focusing on key platform features.</li>
+                              </ul>
+                          </div>
+                          <div class="skills-list">
+                              <span class="skill-tag">Node.js</span>
+                              <span class="skill-tag">Docker</span>
+                              <span class="skill-tag">React.js</span>
+                              <span class="skill-tag">Kubernetes</span>
+                              <span class="skill-tag">Cypress.io</span>
+                              <span class="skill-tag">PostgreSQL</span>
+                              <span class="skill-tag">TypeScript</span>
+                              <span class="skill-tag">Cloud</span>
+                              <span class="skill-tag">Full-Stack Development</span>
+                          </div>
+                      </div>
 
-                        <!-- Calponia by Bosch Engineering GmbH -->
-                        <div class="experience-item">
-                            <div class="company-logo">
-                                <img src="/companies/Bosch-Engineering.jpg" alt="Bosch Engineering GmbH logo" onerror="this.parentNode.innerHTML = 'BE'">
-                            </div>
-                            <div class="experience-header">
-                                <h3 class="job-title">Engineer</h3>
-                                <a href="https://www.bosch-engineering.com" class="company-name" target="_blank" rel="noopener noreferrer">Bosch Engineering GmbH</a>
-                                <p class="job-duration">2018 - 2018 · Less than a year</p>
-                                <p class="job-location">Abstatt, Baden-Württemberg, Germany</p>
-                            </div>
-                            <div class="job-description">
-                                <ul>
-                                    <li>Acted as a mediator between decision-maker and developer groups.</li>
-                                    <li>Assisted management in addressing technical queries.</li>
-                                    <li>Served as the technical point of contact for working students.</li>
-                                </ul>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-tag">Interdisciplinary Collaboration</span>
-                                <span class="skill-tag">Technical Planning</span>
-                                <span class="skill-tag">Cloud</span>
-                            </div>
-                        </div>
+                      <!-- Calponia by Bosch Engineering GmbH -->
+                      <div class="experience-item">
+                          <div class="company-logo">
+                              <img src="/companies/Bosch-Engineering.jpg" alt="Bosch Engineering GmbH logo" onerror="this.parentNode.innerHTML = 'BE'">
+                          </div>
+                          <div class="experience-header">
+                              <h3 class="job-title">Engineer</h3>
+                              <a href="https://www.bosch-engineering.com" class="company-name" target="_blank" rel="noopener noreferrer">Bosch Engineering GmbH</a>
+                              <p class="job-duration">2018 - 2018 · Less than a year</p>
+                              <p class="job-location">Abstatt, Baden-Württemberg, Germany</p>
+                          </div>
+                          <div class="job-description">
+                              <ul>
+                                  <li>Acted as a mediator between decision-maker and developer groups.</li>
+                                  <li>Assisted management in addressing technical queries.</li>
+                                  <li>Served as the technical point of contact for working students.</li>
+                              </ul>
+                          </div>
+                          <div class="skills-list">
+                              <span class="skill-tag">Interdisciplinary Collaboration</span>
+                              <span class="skill-tag">Technical Planning</span>
+                              <span class="skill-tag">Cloud</span>
+                          </div>
+                      </div>
 
-                        <!-- ARENA2036 -->
-                        <div class="experience-item">
-                            <div class="company-logo">
-                                <img src="/companies/Arena2036.jpg" alt="ARENA2036 logo" onerror="this.parentNode.innerHTML = 'AR'">
-                            </div>
-                            <div class="experience-header">
-                                <h3 class="job-title">IT Consultant</h3>
-                                <a href="https://www.arena2036.de" class="company-name" target="_blank" rel="noopener noreferrer">ARENA2036</a>
-                                <p class="job-duration">2016 - 2017 · 1 yr</p>
-                                <p class="job-location">Vaihingen an der Enz, Baden-Württemberg, Germany</p>
-                            </div>
-                            <div class="job-description">
-                                <ul>
-                                    <li>Directly supported management with technical issues and queries.</li>
-                                    <li>Served as a liaison to the Technical Information and Communication Services at the University of Stuttgart.</li>
-                                </ul>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-tag">Linux</span>
-                                <span class="skill-tag">Windows</span>
-                                <span class="skill-tag">Computer Hardware</span>
-                                <span class="skill-tag">MacOS</span>
-                            </div>
-                        </div>
+                      <!-- ARENA2036 -->
+                      <div class="experience-item">
+                          <div class="company-logo">
+                              <img src="/companies/Arena2036.jpg" alt="ARENA2036 logo" onerror="this.parentNode.innerHTML = 'AR'">
+                          </div>
+                          <div class="experience-header">
+                              <h3 class="job-title">IT Consultant</h3>
+                              <a href="https://www.arena2036.de" class="company-name" target="_blank" rel="noopener noreferrer">ARENA2036</a>
+                              <p class="job-duration">2016 - 2017 · 1 yr</p>
+                              <p class="job-location">Vaihingen an der Enz, Baden-Württemberg, Germany</p>
+                          </div>
+                          <div class="job-description">
+                              <ul>
+                                  <li>Directly supported management with technical issues and queries.</li>
+                                  <li>Served as a liaison to the Technical Information and Communication Services at the University of Stuttgart.</li>
+                              </ul>
+                          </div>
+                          <div class="skills-list">
+                              <span class="skill-tag">Linux</span>
+                              <span class="skill-tag">Windows</span>
+                              <span class="skill-tag">Computer Hardware</span>
+                              <span class="skill-tag">MacOS</span>
+                          </div>
+                      </div>
 
-                        <!-- Rieber GmbH & Co. KG -->
-                        <div class="experience-item">
-                            <div class="company-logo">
-                                <img src="/companies/Rieber.jpg" alt="Rieber GmbH & Co. KG logo" onerror="this.parentNode.innerHTML = 'RG'">
-                            </div>
-                            <div class="experience-header">
-                                <h3 class="job-title">Software Developer</h3>
-                                <a href="https://www.rieber.de" class="company-name" target="_blank" rel="noopener noreferrer">Rieber GmbH & Co. KG</a>
-                                <p class="job-duration">2016 - 2017 · 1 yr</p>
-                                <p class="job-location">Reutlingen, Baden-Württemberg, Germany</p>
-                            </div>
-                            <div class="job-description">
-                                <ul>
-                                    <li>Assisted in the technical planning of new product prototypes.</li>
-                                    <li>Provided support in programming new products.</li>
-                                </ul>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">Internet of Things (IoT)</span>
-                                <span class="skill-tag">React.js</span>
-                            </div>
-                        </div>
+                      <!-- Rieber GmbH & Co. KG -->
+                      <div class="experience-item">
+                          <div class="company-logo">
+                              <img src="/companies/Rieber.jpg" alt="Rieber GmbH & Co. KG logo" onerror="this.parentNode.innerHTML = 'RG'">
+                          </div>
+                          <div class="experience-header">
+                              <h3 class="job-title">Software Developer</h3>
+                              <a href="https://www.rieber.de" class="company-name" target="_blank" rel="noopener noreferrer">Rieber GmbH & Co. KG</a>
+                              <p class="job-duration">2016 - 2017 · 1 yr</p>
+                              <p class="job-location">Reutlingen, Baden-Württemberg, Germany</p>
+                          </div>
+                          <div class="job-description">
+                              <ul>
+                                  <li>Assisted in the technical planning of new product prototypes.</li>
+                                  <li>Provided support in programming new products.</li>
+                              </ul>
+                          </div>
+                          <div class="skills-list">
+                              <span class="skill-tag">Node.js</span>
+                              <span class="skill-tag">Internet of Things (IoT)</span>
+                              <span class="skill-tag">React.js</span>
+                          </div>
+                      </div>
 
-                        <!-- Exxeta -->
-                        <div class="experience-item">
-                            <div class="company-logo">
-                                <img src="/companies/Exxeta.jpg" alt="Exxeta logo" onerror="this.parentNode.innerHTML = 'EX'">
-                            </div>
-                            <div class="experience-header">
-                                <h3 class="job-title">Working Student</h3>
-                                <a href="https://www.exxeta.com" class="company-name" target="_blank" rel="noopener noreferrer">Exxeta</a>
-                                <p class="job-duration">Aug 2016 - Oct 2016 · 3 mos</p>
-                                <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
-                            </div>
-                            <div class="job-description">
-                                <ul>
-                                    <li>Collaborated in a pair-programming setup on a project for a major automotive industry client, identifying a critical base data inconsistency issue that was subsequently presented to the client.</li>
-                                </ul>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">Pair Programming</span>
-                            </div>
-                        </div>
+                      <!-- Exxeta -->
+                      <div class="experience-item">
+                          <div class="company-logo">
+                              <img src="/companies/Exxeta.jpg" alt="Exxeta logo" onerror="this.parentNode.innerHTML = 'EX'">
+                          </div>
+                          <div class="experience-header">
+                              <h3 class="job-title">Working Student</h3>
+                              <a href="https://www.exxeta.com" class="company-name" target="_blank" rel="noopener noreferrer">Exxeta</a>
+                              <p class="job-duration">Aug 2016 - Oct 2016 · 3 mos</p>
+                              <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
+                          </div>
+                          <div class="job-description">
+                              <ul>
+                                  <li>Collaborated in a pair-programming setup on a project for a major automotive industry client, identifying a critical base data inconsistency issue that was subsequently presented to the client.</li>
+                              </ul>
+                          </div>
+                          <div class="skills-list">
+                              <span class="skill-tag">Java</span>
+                              <span class="skill-tag">Pair Programming</span>
+                          </div>
+                      </div>
 
-                        <!-- University of Stuttgart Research Assistant 1 -->
-                        <div class="experience-item">
-                            <div class="company-logo">
-                                <img src="/companies/tik-Uni-Stuttgart.jpg" alt="University of Stuttgart logo" onerror="this.parentNode.innerHTML = 'US'">
-                            </div>
-                            <div class="experience-header">
-                                <h3 class="job-title">Research Assistant</h3>
-                                <a href="https://tik.uni-stuttgart.de" class="company-name" target="_blank" rel="noopener noreferrer">University of Stuttgart</a>
-                                <p class="job-duration">2014 - 2016 · 2 yrs</p>
-                                <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
-                            </div>
-                            <div class="job-description">
-                                <ul>
-                                    <li>Served as a technical liaison, aiding the team in understanding technical aspects at the intersection of technology and law.</li>
-                                    <li>Provided support for all technical inquiries, facilitating effective decision-making.</li>
-                                </ul>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-tag">Technical Liaison</span>
-                                <span class="skill-tag">Technology and Law</span>
-                            </div>
-                        </div>
+                      <!-- University of Stuttgart Research Assistant 1 -->
+                      <div class="experience-item">
+                          <div class="company-logo">
+                              <img src="/companies/tik-Uni-Stuttgart.jpg" alt="University of Stuttgart logo" onerror="this.parentNode.innerHTML = 'US'">
+                          </div>
+                          <div class="experience-header">
+                              <h3 class="job-title">Research Assistant</h3>
+                              <a href="https://tik.uni-stuttgart.de" class="company-name" target="_blank" rel="noopener noreferrer">University of Stuttgart</a>
+                              <p class="job-duration">2014 - 2016 · 2 yrs</p>
+                              <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
+                          </div>
+                          <div class="job-description">
+                              <ul>
+                                  <li>Served as a technical liaison, aiding the team in understanding technical aspects at the intersection of technology and law.</li>
+                                  <li>Provided support for all technical inquiries, facilitating effective decision-making.</li>
+                              </ul>
+                          </div>
+                          <div class="skills-list">
+                              <span class="skill-tag">Technical Liaison</span>
+                              <span class="skill-tag">Technology and Law</span>
+                          </div>
+                      </div>
 
-                        <!-- University of Stuttgart Research Assistant 2 -->
-                        <div class="experience-item">
-                            <div class="company-logo">
-                                <img src="/companies/RewUS-Uni-Stuttgart.jpg" alt="University of Stuttgart logo" onerror="this.parentNode.innerHTML = 'US'">
-                            </div>
-                            <div class="experience-header">
-                                <h3 class="job-title">Research Assistant</h3>
-                                <a href="https://ivr.uni-stuttgart.de" class="company-name" target="_blank" rel="noopener noreferrer">University of Stuttgart</a>
-                                <p class="job-duration">2010 - 2014 · 4 yrs</p>
-                                <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
-                            </div>
-                            <div class="job-description">
-                                <ul>
-                                    <li>Led and coordinated a team of 14 research assistants.</li>
-                                    <li>Conducted regular, certified training sessions for academic staff.</li>
-                                    <li>Designed and developed targeted training materials for academic staff.</li>
-                                </ul>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-tag">Team Leadership</span>
-                                <span class="skill-tag">Training</span>
-                                <span class="skill-tag">Material Development</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                      <!-- University of Stuttgart Research Assistant 2 -->
+                      <div class="experience-item">
+                          <div class="company-logo">
+                              <img src="/companies/RewUS-Uni-Stuttgart.jpg" alt="University of Stuttgart logo" onerror="this.parentNode.innerHTML = 'US'">
+                          </div>
+                          <div class="experience-header">
+                              <h3 class="job-title">Research Assistant</h3>
+                              <a href="https://ivr.uni-stuttgart.de" class="company-name" target="_blank" rel="noopener noreferrer">University of Stuttgart</a>
+                              <p class="job-duration">2010 - 2014 · 4 yrs</p>
+                              <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
+                          </div>
+                          <div class="job-description">
+                              <ul>
+                                  <li>Led and coordinated a team of 14 research assistants.</li>
+                                  <li>Conducted regular, certified training sessions for academic staff.</li>
+                                  <li>Designed and developed targeted training materials for academic staff.</li>
+                              </ul>
+                          </div>
+                          <div class="skills-list">
+                              <span class="skill-tag">Team Leadership</span>
+                              <span class="skill-tag">Training</span>
+                              <span class="skill-tag">Material Development</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
 
-            <section id="contact-section">
-                <div class="section-header">
-                    <h2 class="section-title">Contact Information</h2>
-                    <button class="toggle-btn" data-target="contact-content">
-                        Show Less
-                    </button>
-                </div>
-                <div class="section-content" id="contact-content">
-                    <div class="copy-container">
-                        <div class="copy-text">mail@perguth.de</div>
-                        <button class="copy-btn" data-copy="mail@perguth.de">Copy</button>
-                    </div>
-                    <div class="copy-container">
-                        <div class="copy-text">+49 711 217 244 42</div>
-                        <button class="copy-btn" data-copy="+4971121724442">Copy</button>
-                    </div>
-                    <div class="copy-container">
-                        <div class="copy-text">https://perguth.de/meet</div>
-                        <button class="copy-btn" data-copy="https://perguth.de/meet">Copy</button>
-                    </div>
-                    <div class="copy-container">
-                        <div class="copy-text">https://web.whatsapp.com/send/?phone=4971121724442</div>
-                        <button class="copy-btn" data-copy="https://web.whatsapp.com/send/?phone=4971121724442">Copy</button>
-                    </div>
-                </div>
-            </section>
+          <section id="contact-section">
+              <div class="section-header">
+                  <h2 class="section-title">Contact Information</h2>
+                  <button class="toggle-btn" data-target="contact-content">
+                      Show Less
+                  </button>
+              </div>
+              <div class="section-content" id="contact-content">
+                  <div class="copy-container">
+                      <div class="copy-text">mail@perguth.de</div>
+                      <button class="copy-btn" data-copy="mail@perguth.de">Copy</button>
+                  </div>
+                  <div class="copy-container">
+                      <div class="copy-text">+49 711 217 244 42</div>
+                      <button class="copy-btn" data-copy="+4971121724442">Copy</button>
+                  </div>
+                  <div class="copy-container">
+                      <div class="copy-text">Per Guth
+c/o Thingylabs GmbH
+Hasenbergsteige 6
+70178 Stuttgart
+Germany</div>
+                      <button class="copy-btn" data-copy="Per Guth
+c/o Thingylabs GmbH
+Hasenbergsteige 6
+70178 Stuttgart
+Germany">Copy</button>
+                  </div>
+              </div>
+          </section>
 
-            <section id="links-section">
-                <div class="section-header">
-                    <h2 class="section-title">Professional Links</h2>
-                    <button class="toggle-btn" data-target="links-content">
-                        Show Less
-                    </button>
-                </div>
-                <div class="section-content" id="links-content">
-                    <div class="links-grid">
-                        <div class="link-card">
-                            <h3 class="link-title">Blog</h3>
-                            <p class="link-description">Technical articles and insights</p>
-                            <a href="https://blog.perguth.de" class="link-url" target="_blank" rel="noopener noreferrer">blog.perguth.de</a>
-                        </div>
-                        <div class="link-card">
-                            <h3 class="link-title">Ideas</h3>
-                            <p class="link-description">Project concepts and innovations</p>
-                            <a href="https://perguth.de/ideas/" class="link-url" target="_blank" rel="noopener noreferrer">perguth.de/ideas</a>
-                        </div>
-                        <div class="link-card">
-                            <h3 class="link-title">LinkedIn</h3>
-                            <p class="link-description">Professional profile and network</p>
-                            <a href="https://www.linkedin.com/in/perguth/" class="link-url" target="_blank" rel="noopener noreferrer">linkedin.com/in/perguth</a>
-                        </div>
-                        <div class="link-card">
-                            <h3 class="link-title">Thingylabs</h3>
-                            <p class="link-description">Software & Cloud Development</p>
-                            <a href="https://www.thingylabs.io" class="link-url" target="_blank" rel="noopener noreferrer">thingylabs.io</a>
-                        </div>
-                        <div class="link-card">
-                            <h3 class="link-title">Bluesky</h3>
-                            <p class="link-description">Professional updates and insights</p>
-                            <a href="https://bsky.app/profile/perguth.d3v.ltd" class="link-url" target="_blank" rel="noopener noreferrer">bsky.app/profile/perguth.d3v.ltd</a>
-                        </div>
-                        <div class="link-card">
-                            <h3 class="link-title">Payment</h3>
-                            <p class="link-description">Secure payment options</p>
-                            <a href="https://perguth.de/pay" class="link-url" target="_blank" rel="noopener noreferrer">perguth.de/pay</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          <section id="links-section">
+              <div class="section-header">
+                  <h2 class="section-title">Professional Links</h2>
+                  <button class="toggle-btn" data-target="links-content">
+                      Show Less
+                  </button>
+              </div>
+              <div class="section-content" id="links-content">
+                  <div class="links-grid">
+                      <a href="https://blog.perguth.de" class="link-card" target="_blank" rel="noopener noreferrer">
+                          <h3 class="link-title">Blog</h3>
+                          <p class="link-description">Technical articles and insights</p>
+                          <span class="link-url">blog.perguth.de</span>
+                      </a>
+                      <a href="https://perguth.de/ideas/" class="link-card" target="_blank" rel="noopener noreferrer">
+                          <h3 class="link-title">Ideas</h3>
+                          <p class="link-description">Project concepts and innovations</p>
+                          <span class="link-url">perguth.de/ideas</span>
+                      </a>
+                      <a href="https://www.linkedin.com/in/perguth/" class="link-card" target="_blank" rel="noopener noreferrer">
+                          <h3 class="link-title">LinkedIn</h3>
+                          <p class="link-description">Professional profile and network</p>
+                          <span class="link-url">linkedin.com/in/perguth</span>
+                      </a>
+                      <a href="https://www.thingylabs.io" class="link-card" target="_blank" rel="noopener noreferrer">
+                          <h3 class="link-title">Thingylabs</h3>
+                          <p class="link-description">Software & Cloud Development</p>
+                          <span class="link-url">thingylabs.io</span>
+                      </a>
+                      <a href="https://bsky.app/profile/perguth.d3v.ltd" class="link-card" target="_blank" rel="noopener noreferrer">
+                          <h3 class="link-title">Bluesky</h3>
+                          <p class="link-description">Professional updates and insights</p>
+                          <span class="link-url">bsky.app/profile/perguth.d3v.ltd</span>
+                      </a>
+                      <a href="https://perguth.de/pay" class="link-card" target="_blank" rel="noopener noreferrer">
+                          <h3 class="link-title">Payment</h3>
+                          <p class="link-description">Secure payment options</p>
+                          <span class="link-url">perguth.de/pay</span>
+                      </a>
+                  </div>
+              </div>
+          </section>
 
-            <section id="skills-section">
-                <div class="section-header">
-                    <h2 class="section-title">Skills & Expertise</h2>
-                    <button class="toggle-btn" data-target="skills-content">
-                        Show Less
-                    </button>
-                </div>
-                <div class="section-content" id="skills-content">
-                    <div class="skills-list">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">Cloud</span>
-                        <span class="skill-tag">Full-Stack Development</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">Cypress.io</span>
-                        <span class="skill-tag">Internet of Things (IoT)</span>
-                        <span class="skill-tag">Deno</span>
-                        <span class="skill-tag">Cloudflare</span>
-                        <span class="skill-tag">International Business</span>
-                        <span class="skill-tag">Quality Assurance</span>
-                        <span class="skill-tag">Home Automation</span>
-                        <span class="skill-tag">Legal Compliance</span>
-                        <span class="skill-tag">Commercial Operation</span>
-                        <span class="skill-tag">Company Set-up</span>
-                        <span class="skill-tag">Brand Development</span>
-                        <span class="skill-tag">Human Resources</span>
-                        <span class="skill-tag">Interdisciplinary Collaboration</span>
-                        <span class="skill-tag">Technical Planning</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Windows</span>
-                        <span class="skill-tag">MacOS</span>
-                        <span class="skill-tag">Computer Hardware</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Pair Programming</span>
-                        <span class="skill-tag">Team Leadership</span>
-                        <span class="skill-tag">Training</span>
-                        <span class="skill-tag">Material Development</span>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
+          <section id="skills-section">
+              <div class="section-header">
+                  <h2 class="section-title">Skills & Expertise</h2>
+                  <button class="toggle-btn" data-target="skills-content">
+                      Show Less
+                  </button>
+              </div>
+              <div class="section-content" id="skills-content">
+                  <div class="skills-list">
+                      <span class="skill-tag">Node.js</span>
+                      <span class="skill-tag">TypeScript</span>
+                      <span class="skill-tag">React.js</span>
+                      <span class="skill-tag">Docker</span>
+                      <span class="skill-tag">Kubernetes</span>
+                      <span class="skill-tag">Cloud</span>
+                      <span class="skill-tag">Full-Stack Development</span>
+                      <span class="skill-tag">PostgreSQL</span>
+                      <span class="skill-tag">Cypress.io</span>
+                      <span class="skill-tag">Internet of Things (IoT)</span>
+                      <span class="skill-tag">Deno</span>
+                      <span class="skill-tag">Cloudflare</span>
+                      <span class="skill-tag">International Business</span>
+                      <span class="skill-tag">Quality Assurance</span>
+                      <span class="skill-tag">Home Automation</span>
+                      <span class="skill-tag">Legal Compliance</span>
+                      <span class="skill-tag">Commercial Operation</span>
+                      <span class="skill-tag">Company Set-up</span>
+                      <span class="skill-tag">Brand Development</span>
+                      <span class="skill-tag">Human Resources</span>
+                      <span class="skill-tag">Interdisciplinary Collaboration</span>
+                      <span class="skill-tag">Technical Planning</span>
+                      <span class="skill-tag">Linux</span>
+                      <span class="skill-tag">Windows</span>
+                      <span class="skill-tag">MacOS</span>
+                      <span class="skill-tag">Computer Hardware</span>
+                      <span class="skill-tag">Java</span>
+                      <span class="skill-tag">Pair Programming</span>
+                      <span class="skill-tag">Team Leadership</span>
+                      <span class="skill-tag">Training</span>
+                      <span class="skill-tag">Material Development</span>
+                  </div>
+              </div>
+          </section>
+      </div>
+  </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Per Guth. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://github.com/perguth/perguth.github.io" class="footer-link" target="_blank" rel="noopener noreferrer">&lt;/src&gt;</a>
-                <a href="https://perguth.de/privacy" class="footer-link" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                <a href="https://perguth.de/imprint" class="footer-link" target="_blank" rel="noopener noreferrer">Imprint</a>
+  <footer>
+      <div class="container">
+          <p>© 2025 Per Guth. All rights reserved.</p>
+          <div class="footer-links">
+              <a href="https://github.com/perguth/perguth.github.io" class="footer-link" target="_blank" rel="noopener noreferrer">&lt;/src&gt;</a>
+              <a href="https://perguth.de/imprint" class="footer-link" target="_blank" rel="noopener noreferrer">Imprint</a>
+              <a href="https://perguth.de/legacy" class="footer-link" target="_blank" rel="noopener noreferrer">Legacy</a>
             </div>
-        </div>
-    </footer>
+      </div>
+  </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Theme toggle functionality
-            const themeToggle = document.getElementById('theme-toggle');
-            const sunIcon = themeToggle.querySelector('.sun-icon');
-            const moonIcon = themeToggle.querySelector('.moon-icon');
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Theme toggle functionality
+          const themeToggle = document.getElementById('theme-toggle');
+          const sunIcon = themeToggle.querySelector('.sun-icon');
+          const moonIcon = themeToggle.querySelector('.moon-icon');
 
-            // Check for saved theme preference or use preferred color scheme
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-            } else if (savedTheme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'light');
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-            } else {
-                // Use system preference by default
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    sunIcon.style.display = 'none';
-                    moonIcon.style.display = 'block';
-                }
-            }
+          // Check for saved theme preference or use preferred color scheme
+          const savedTheme = localStorage.getItem('theme');
+          if (savedTheme === 'dark') {
+              document.documentElement.setAttribute('data-theme', 'dark');
+              sunIcon.style.display = 'none';
+              moonIcon.style.display = 'block';
+          } else if (savedTheme === 'light') {
+              document.documentElement.setAttribute('data-theme', 'light');
+              sunIcon.style.display = 'block';
+              moonIcon.style.display = 'none';
+          } else {
+              // Use system preference by default
+              if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                  document.documentElement.setAttribute('data-theme', 'dark');
+                  sunIcon.style.display = 'none';
+                  moonIcon.style.display = 'block';
+              }
+          }
 
-            // Toggle theme when button is clicked
-            themeToggle.addEventListener('click', function() {
-                if (document.documentElement.getAttribute('data-theme') === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
-                    sunIcon.style.display = 'block';
-                    moonIcon.style.display = 'none';
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                    sunIcon.style.display = 'none';
-                    moonIcon.style.display = 'block';
-                }
-            });
+          // Toggle theme when button is clicked
+          themeToggle.addEventListener('click', function() {
+              if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                  document.documentElement.setAttribute('data-theme', 'light');
+                  localStorage.setItem('theme', 'light');
+                  sunIcon.style.display = 'block';
+                  moonIcon.style.display = 'none';
+              } else {
+                  document.documentElement.setAttribute('data-theme', 'dark');
+                  localStorage.setItem('theme', 'dark');
+                  sunIcon.style.display = 'none';
+                  moonIcon.style.display = 'block';
+              }
+          });
 
-            // Toggle sections
-            const toggleButtons = document.querySelectorAll('.toggle-btn');
+          // Toggle sections
+          const toggleButtons = document.querySelectorAll('.toggle-btn');
 
-            toggleButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const targetId = this.getAttribute('data-target');
-                    const targetContent = document.getElementById(targetId);
-                    const parentSection = this.closest('section');
+          toggleButtons.forEach(button => {
+              button.addEventListener('click', function() {
+                  const targetId = this.getAttribute('data-target');
+                  const targetContent = document.getElementById(targetId);
+                  const parentSection = this.closest('section');
 
-                    if (parentSection.classList.contains('collapsed')) {
-                        parentSection.classList.remove('collapsed');
-                        this.textContent = 'Show Less';
-                    } else {
-                        parentSection.classList.add('collapsed');
-                        this.textContent = 'Show More';
-                    }
-                });
-            });
+                  if (parentSection.classList.contains('collapsed')) {
+                      parentSection.classList.remove('collapsed');
+                      this.textContent = 'Show Less';
+                  } else {
+                      parentSection.classList.add('collapsed');
+                      this.textContent = 'Show More';
+                  }
+              });
+          });
 
-            // Copy functionality
-            const copyButtons = document.querySelectorAll('.copy-btn');
+          // Copy functionality
+          const copyButtons = document.querySelectorAll('.copy-btn');
 
-            copyButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const textToCopy = this.getAttribute('data-copy');
-                    navigator.clipboard.writeText(textToCopy).then(() => {
-                        const originalText = this.textContent;
-                        this.textContent = 'Copied!';
-                        this.classList.add('success');
+          copyButtons.forEach(button => {
+              button.addEventListener('click', function() {
+                  const textToCopy = this.getAttribute('data-copy');
+                  navigator.clipboard.writeText(textToCopy).then(() => {
+                      const originalText = this.textContent;
+                      this.textContent = 'Copied!';
+                      this.classList.add('success');
 
-                        setTimeout(() => {
-                            this.textContent = originalText;
-                            this.classList.remove('success');
-                        }, 2000);
-                    });
-                });
-            });
+                      setTimeout(() => {
+                          this.textContent = originalText;
+                          this.classList.remove('success');
+                      }, 2000);
+                  });
+              });
+          });
 
-            // Initialize all sections as expanded
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.classList.remove('collapsed');
-            });
-        });
-    </script>
+          // Initialize all sections as expanded
+          const sections = document.querySelectorAll('section');
+          sections.forEach(section => {
+              section.classList.remove('collapsed');
+          });
+      });
+  </script>
 </body>
 </html>
-
