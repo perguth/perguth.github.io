@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,42 +18,42 @@
             --serif: 'Crimson Pro', Georgia, serif;
             --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             --accent: #0a66c2;
-            --text: #1f2937;
-            --text-light: #666666;
-            --text-muted: #8e8e8e;
+            --text: #121212;
+            --text-light: #444444;
+            --text-muted: #6b6b6b;
             --background: #ffffff;
-            --background-alt: #f9fafb;
+            --background-alt: #f5f5f5;
             --card-bg: #ffffff;
-            --border: #e5e7eb;
-            --border-light: #f3f4f6;
-            --shadow: rgba(0, 0, 0, 0.05);
+            --border: #d0d0d0;
+            --border-light: #e0e0e0;
+            --shadow: rgba(0, 0, 0, 0.08);
         }
 
         [data-theme="dark"] {
-            --accent: #70b5f9;
-            --text: #e5e7eb;
-            --text-light: #9ca3af;
-            --text-muted: #6b7280;
-            --background: #1a1a1a;
-            --background-alt: #242424;
+            --accent: #4d9fff;
+            --text: #ffffff;
+            --text-light: #cccccc;
+            --text-muted: #a0a0a0;
+            --background: #121212;
+            --background-alt: #1e1e1e;
             --card-bg: #2d2d2d;
-            --border: #3d3d3d;
+            --border: #444444;
             --border-light: #333333;
-            --shadow: rgba(0, 0, 0, 0.2);
+            --shadow: rgba(0, 0, 0, 0.3);
         }
 
         @media (prefers-color-scheme: dark) {
             :root:not([data-theme="light"]) {
-                --accent: #70b5f9;
-                --text: #e5e7eb;
-                --text-light: #9ca3af;
-                --text-muted: #6b7280;
-                --background: #1a1a1a;
-                --background-alt: #242424;
+                --accent: #4d9fff;
+                --text: #ffffff;
+                --text-light: #cccccc;
+                --text-muted: #a0a0a0;
+                --background: #121212;
+                --background-alt: #1e1e1e;
                 --card-bg: #2d2d2d;
-                --border: #3d3d3d;
+                --border: #444444;
                 --border-light: #333333;
-                --shadow: rgba(0, 0, 0, 0.2);
+                --shadow: rgba(0, 0, 0, 0.3);
             }
         }
 
@@ -77,14 +78,12 @@
             overflow-x: hidden;
         }
 
-        /* Layout */
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
 
-        /* Header */
         header {
             padding: 2rem 0;
             border-bottom: 1px solid var(--border);
@@ -119,7 +118,7 @@
         .status-badge {
             display: inline-flex;
             align-items: center;
-            background-color: rgba(10, 102, 194, 0.1);
+            background-color: rgba(10, 102, 194, 0.15);
             color: var(--accent);
             font-size: 0.75rem;
             font-weight: 600;
@@ -128,7 +127,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Quick links */
         .quick-links {
             display: flex;
             flex-wrap: wrap;
@@ -148,12 +146,18 @@
             font-size: 0.875rem;
             transition: all 0.2s ease;
             border: 1px solid var(--border-light);
+            font-weight: 500;
         }
 
         .quick-link:hover {
             background-color: var(--accent);
             color: white;
             transform: translateY(-2px);
+        }
+
+        .quick-link:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
         }
 
         .quick-link-icon {
@@ -164,7 +168,6 @@
             justify-content: center;
         }
 
-        /* Main content */
         main {
             padding: 2rem 0;
         }
@@ -195,11 +198,16 @@
             padding: 1.5rem;
         }
 
-        /* Experience items */
         .experience-list {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+        }
+
+        .job-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
         }
 
         .company-logo {
@@ -223,7 +231,16 @@
         .company-logo img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            background-color: white;
+        }
+
+        .company-logo img[src="/companies/Guth.global.jpg"] {
+            padding: 4px;
+        }
+
+        .company-logo img[src="/companies/RewUS-Uni-Stuttgart.jpg"] {
+            padding: 2px;
         }
 
         .experience-item {
@@ -264,22 +281,30 @@
             margin-bottom: 0.25rem;
             text-decoration: none;
             display: inline-block;
+            font-weight: 500;
         }
 
         .company-name:hover {
             text-decoration: underline;
         }
 
+        .company-name:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
         .job-duration {
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: var(--text-light);
             margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
         .job-location {
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: var(--text-light);
             margin-bottom: 0.75rem;
+            font-weight: 500;
         }
 
         .job-description {
@@ -306,14 +331,15 @@
 
         .skill-tag {
             font-size: 0.75rem;
-            color: var(--text-light);
+            color: var(--text);
             background-color: var(--background-alt);
             padding: 0.25rem 0.5rem;
             border-radius: 4px;
             white-space: nowrap;
+            font-weight: 500;
+            border: 1px solid var(--border-light);
         }
 
-        /* Toggle button */
         .toggle-btn {
             background: none;
             border: none;
@@ -326,13 +352,18 @@
             padding: 0.25rem 0.5rem;
             border-radius: 4px;
             transition: background-color 0.3s ease;
+            font-weight: 500;
         }
 
         .toggle-btn:hover {
-            background-color: rgba(10, 102, 194, 0.1);
+            background-color: rgba(10, 102, 194, 0.15);
         }
 
-        /* Copy functionality */
+        .toggle-btn:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
         .copy-container {
             position: relative;
             margin-bottom: 0.75rem;
@@ -362,6 +393,7 @@
             cursor: pointer;
             opacity: 0;
             transition: opacity 0.3s ease;
+            font-weight: 500;
         }
 
         .copy-container:hover .copy-btn {
@@ -372,7 +404,12 @@
             background-color: #10b981;
         }
 
-        /* Links section */
+        .copy-btn:focus {
+            opacity: 1;
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
         .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -387,11 +424,18 @@
             cursor: pointer;
             display: block;
             text-decoration: none;
+            border: 1px solid var(--border-light);
         }
 
         .link-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 6px var(--shadow);
+        }
+
+        .link-card:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+            transform: translateY(-2px);
         }
 
         .link-title {
@@ -417,7 +461,6 @@
             text-decoration: underline;
         }
 
-        /* Footer */
         footer {
             padding: 2rem 0;
             border-top: 1px solid var(--border);
@@ -443,12 +486,15 @@
             text-decoration: underline;
         }
 
-        /* Collapsed state */
+        .footer-link:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
         .collapsed .section-content {
             display: none;
         }
 
-        /* Theme toggle */
         .theme-toggle {
             position: fixed;
             top: 1rem;
@@ -472,13 +518,17 @@
             box-shadow: 0 4px 8px var(--shadow);
         }
 
+        .theme-toggle:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
         .theme-toggle svg {
             width: 1.25rem;
             height: 1.25rem;
             color: var(--text);
         }
 
-        /* Responsive */
         @media (max-width: 640px) {
             .container {
                 padding: 0 1rem;
@@ -537,12 +587,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Crimson+Pro:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="sun-icon">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -553,7 +607,8 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon" style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="moon-icon" style="display: none;">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
     </button>
@@ -569,8 +624,12 @@
                     <div class="quick-links">
                         <a href="mailto:mail@perguth.de" class="quick-link">
                             <span class="quick-link-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
                                     <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
                             </span>
@@ -578,23 +637,34 @@
                         </a>
                         <a href="tel:+4971121724442" class="quick-link">
                             <span class="quick-link-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
                                 </svg>
                             </span>
                             Call
                         </a>
-                        <a href="https://web.whatsapp.com/send/?phone=4971121724442" class="quick-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://web.whatsapp.com/send/?phone=4971121724442" class="quick-link" target="_blank"
+                            rel="noopener noreferrer">
                             <span class="quick-link-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
                                 </svg>
                             </span>
                             WhatsApp
                         </a>
                         <a href="https://perguth.de/meet" class="quick-link" target="_blank" rel="noopener noreferrer">
                             <span class="quick-link-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                                     <line x1="16" y1="2" x2="16" y2="6"></line>
                                     <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -603,10 +673,15 @@
                             </span>
                             Calendar
                         </a>
-                        <a href="https://perguth.de/ideas/" class="quick-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://perguth.de/ideas/" class="quick-link" target="_blank"
+                            rel="noopener noreferrer">
                             <span class="quick-link-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                    </path>
                                     <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                                     <line x1="12" y1="22.08" x2="12" y2="12"></line>
                                 </svg>
@@ -615,7 +690,9 @@
                         </a>
                         <a href="https://blog.perguth.de" class="quick-link" target="_blank" rel="noopener noreferrer">
                             <span class="quick-link-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                                     <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                                 </svg>
@@ -642,17 +719,19 @@
                         <!-- D3velop.ltd -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/D3velop.jpg" alt="D3velop.ltd logo" onerror="this.parentNode.innerHTML = 'D3'">
+                                <img src="/companies/D3velop.jpg" alt="D3velop.ltd logo"
+                                    onerror="this.parentNode.innerHTML = 'D3'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Founding Partner</h3>
-                                <a href="https://d3v.ltd" class="company-name" target="_blank" rel="noopener noreferrer">𝗗𝟯𝘃elop.ltd</a>
+                                <a href="https://d3v.ltd" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">𝗗𝟯𝘃elop.ltd</a>
                                 <p class="job-duration">Jan 2025 - Present · 4 mos</p>
-                                <p class="job-location">Seychelles</p>
                             </div>
                             <div class="job-description">
                                 <ul>
-                                    <li>Working with a digital innovation collective crafting B2B SaaS, IP & luxury brands.</li>
+                                    <li>Working with a digital innovation collective crafting B2B SaaS, IP & luxury
+                                        brands.</li>
                                 </ul>
                             </div>
                             <div class="skills-list">
@@ -665,13 +744,14 @@
                         <!-- Guth.global OÜ -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Guth.global.jpg" alt="Guth.global OÜ logo" onerror="this.parentNode.innerHTML = 'GG'">
+                                <img src="/companies/Guth.global.jpg" alt="Guth.global OÜ logo"
+                                    onerror="this.parentNode.innerHTML = 'GG'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Founder & Airbnb Superhost</h3>
-                                <a href="https://guth.global" class="company-name" target="_blank" rel="noopener noreferrer">Guth.global OÜ</a>
+                                <a href="https://guth.global" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">Guth.global OÜ</a>
                                 <p class="job-duration">May 2023 - Present · 2 yrs</p>
-                                <p class="job-location">Tallinn, Harjumaa, Estonia</p>
                             </div>
                             <div class="job-description">
                                 <ul>
@@ -689,17 +769,21 @@
                         <!-- Thingylabs.io -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs.io logo" onerror="this.parentNode.innerHTML = 'TL'">
+                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs.io logo"
+                                    onerror="this.parentNode.innerHTML = 'TL'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Full-stack Engineer</h3>
-                                <a href="https://thingylabs.io" class="company-name" target="_blank" rel="noopener noreferrer">Thingylabs.io</a>
+                                <a href="https://thingylabs.io" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">Thingylabs.io</a>
                                 <p class="job-duration">May 2022 - Present · 3 yrs</p>
                             </div>
                             <div class="job-description">
                                 <ul>
-                                    <li>Co-founder of Pixelpilot.club (ergonomic gaming chairs) and Sternvoll.com (silver & gold jewelry).</li>
-                                    <li>Expertise in e-commerce, product development, international sourcing, and online sales.</li>
+                                    <li>Co-founder of Pixelpilot.club (ergonomic gaming chairs) and Sternvoll.com
+                                        (silver & gold jewelry).</li>
+                                    <li>Expertise in e-commerce, product development, international sourcing, and online
+                                        sales.</li>
                                 </ul>
                             </div>
                             <div class="skills-list">
@@ -712,13 +796,14 @@
                         <!-- Managing Partner & Co-founder -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs.io logo" onerror="this.parentNode.innerHTML = 'TL'">
+                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs.io logo"
+                                    onerror="this.parentNode.innerHTML = 'TL'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Managing Partner & Co-founder</h3>
-                                <a href="https://thingylabs.io" class="company-name" target="_blank" rel="noopener noreferrer">Thingylabs.io</a>
+                                <a href="https://thingylabs.io" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">Thingylabs.io</a>
                                 <p class="job-duration">Jan 2017 - Dec 2024 · 8 yrs</p>
-                                <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
                             </div>
                             <div class="job-description">
                                 <ul>
@@ -733,426 +818,458 @@
                         <!-- Full-stack Engineer Thingylabs GmbH -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs GmbH logo" onerror="this.parentNode.innerHTML = 'TL'">
+                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs GmbH logo"
+                                    onerror="this.parentNode.innerHTML = 'TL'">
                             </div>
-                            <div class
+                            <div class <div class="experience-header">
+                                <h3 class="job-title">Full-stack Engineer</h3>
+                                <a href="https://thingylabs.io" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">Thingylabs GmbH</a>
+                                <p class="job-duration">2022 - 2023 · 1 yr</p>
+                                <p class="job-location">Germany</p>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Engaged in diverse areas including testing, front-end, back-end development,
+                                        architecture, and orchestration, with a primary focus on enhancing key platform
+                                        features.</li>
+                                </ul>
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">React.js</span>
+                                <span class="skill-tag">Kubernetes</span>
+                                <span class="skill-tag">Cypress.io</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">Cloud</span>
+                                <span class="skill-tag">Full-Stack Development</span>
+                            </div>
+                        </div>
+
+                        <!-- PANTARIS by ETAS GmbH -->
+                        <div class="experience-item">
+                            <div class="company-logo">
+                                <img src="/companies/Bosch-Engineering.jpg" alt="ETAS GmbH logo"
+                                    onerror="this.parentNode.innerHTML = 'PE'">
+                            </div>
                             <div class="experience-header">
-                              <h3 class="job-title">Full-stack Engineer</h3>
-                              <a href="https://thingylabs.io" class="company-name" target="_blank" rel="noopener noreferrer">Thingylabs GmbH</a>
-                              <p class="job-duration">2022 - 2023 · 1 yr</p>
-                              <p class="job-location">Germany</p>
-                          </div>
-                          <div class="job-description">
-                              <ul>
-                                  <li>Engaged in diverse areas including testing, front-end, back-end development, architecture, and orchestration, with a primary focus on enhancing key platform features.</li>
-                              </ul>
-                          </div>
-                          <div class="skills-list">
-                              <span class="skill-tag">Node.js</span>
-                              <span class="skill-tag">Docker</span>
-                              <span class="skill-tag">React.js</span>
-                              <span class="skill-tag">Kubernetes</span>
-                              <span class="skill-tag">Cypress.io</span>
-                              <span class="skill-tag">PostgreSQL</span>
-                              <span class="skill-tag">TypeScript</span>
-                              <span class="skill-tag">Cloud</span>
-                              <span class="skill-tag">Full-Stack Development</span>
-                          </div>
-                      </div>
+                                <h3 class="job-title">Full-stack Engineer</h3>
+                                <a href="https://www.etas.com" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">PANTARIS by ETAS GmbH</a>
+                                <p class="job-duration">Apr 2017 - Jan 2022 · 4 yrs 10 mos</p>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Served as principal engineer, evolving an initial prototype into a full-scale
+                                        production system.</li>
+                                    <li>Oversaw design, testing, front-end, back-end, architecture, and orchestration,
+                                        focusing on key platform features.</li>
+                                </ul>
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">React.js</span>
+                                <span class="skill-tag">Kubernetes</span>
+                                <span class="skill-tag">Cypress.io</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">Cloud</span>
+                                <span class="skill-tag">Full-Stack Development</span>
+                            </div>
+                        </div>
 
-                      <!-- PANTARIS by ETAS GmbH -->
-                      <div class="experience-item">
-                          <div class="company-logo">
-                              <img src="/companies/Bosch-Engineering.jpg" alt="ETAS GmbH logo" onerror="this.parentNode.innerHTML = 'PE'">
-                          </div>
-                          <div class="experience-header">
-                              <h3 class="job-title">Full-stack Engineer</h3>
-                              <a href="https://www.etas.com" class="company-name" target="_blank" rel="noopener noreferrer">PANTARIS by ETAS GmbH</a>
-                              <p class="job-duration">Apr 2017 - Jan 2022 · 4 yrs 10 mos</p>
-                              <p class="job-location">Germany</p>
-                          </div>
-                          <div class="job-description">
-                              <ul>
-                                  <li>Served as principal engineer, evolving an initial prototype into a full-scale production system.</li>
-                                  <li>Oversaw design, testing, front-end, back-end, architecture, and orchestration, focusing on key platform features.</li>
-                              </ul>
-                          </div>
-                          <div class="skills-list">
-                              <span class="skill-tag">Node.js</span>
-                              <span class="skill-tag">Docker</span>
-                              <span class="skill-tag">React.js</span>
-                              <span class="skill-tag">Kubernetes</span>
-                              <span class="skill-tag">Cypress.io</span>
-                              <span class="skill-tag">PostgreSQL</span>
-                              <span class="skill-tag">TypeScript</span>
-                              <span class="skill-tag">Cloud</span>
-                              <span class="skill-tag">Full-Stack Development</span>
-                          </div>
-                      </div>
+                        <!-- Calponia by Bosch Engineering GmbH -->
+                        <div class="experience-item">
+                            <div class="company-logo">
+                                <img src="/companies/Bosch-Engineering.jpg" alt="Bosch Engineering GmbH logo"
+                                    onerror="this.parentNode.innerHTML = 'BE'">
+                            </div>
+                            <div class="experience-header">
+                                <h3 class="job-title">Engineer</h3>
+                                <a href="https://www.bosch-engineering.com" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">Bosch Engineering GmbH</a>
+                                <p class="job-duration">2018 - 2018 · Less than a year</p>
+                                <p class="job-location">Abstatt, Baden-Württemberg, Germany</p>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Acted as a mediator between decision-maker and developer groups.</li>
+                                    <li>Assisted management in addressing technical queries.</li>
+                                    <li>Served as the technical point of contact for working students.</li>
+                                </ul>
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag">Interdisciplinary Collaboration</span>
+                                <span class="skill-tag">Technical Planning</span>
+                                <span class="skill-tag">Cloud</span>
+                            </div>
+                        </div>
 
-                      <!-- Calponia by Bosch Engineering GmbH -->
-                      <div class="experience-item">
-                          <div class="company-logo">
-                              <img src="/companies/Bosch-Engineering.jpg" alt="Bosch Engineering GmbH logo" onerror="this.parentNode.innerHTML = 'BE'">
-                          </div>
-                          <div class="experience-header">
-                              <h3 class="job-title">Engineer</h3>
-                              <a href="https://www.bosch-engineering.com" class="company-name" target="_blank" rel="noopener noreferrer">Bosch Engineering GmbH</a>
-                              <p class="job-duration">2018 - 2018 · Less than a year</p>
-                              <p class="job-location">Abstatt, Baden-Württemberg, Germany</p>
-                          </div>
-                          <div class="job-description">
-                              <ul>
-                                  <li>Acted as a mediator between decision-maker and developer groups.</li>
-                                  <li>Assisted management in addressing technical queries.</li>
-                                  <li>Served as the technical point of contact for working students.</li>
-                              </ul>
-                          </div>
-                          <div class="skills-list">
-                              <span class="skill-tag">Interdisciplinary Collaboration</span>
-                              <span class="skill-tag">Technical Planning</span>
-                              <span class="skill-tag">Cloud</span>
-                          </div>
-                      </div>
+                        <!-- ARENA2036 -->
+                        <div class="experience-item">
+                            <div class="company-logo">
+                                <img src="/companies/Arena2036.jpg" alt="ARENA2036 logo"
+                                    onerror="this.parentNode.innerHTML = 'AR'">
+                            </div>
+                            <div class="experience-header">
+                                <h3 class="job-title">IT Consultant</h3>
+                                <a href="https://www.arena2036.de" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">ARENA2036</a>
+                                <p class="job-duration">2016 - 2017 · 1 yr</p>
+                                <p class="job-location">Vaihingen an der Enz, Baden-Württemberg, Germany</p>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Directly supported management with technical issues and queries.</li>
+                                    <li>Served as a liaison to the Technical Information and Communication Services at
+                                        the University of Stuttgart.</li>
+                                </ul>
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag">Linux</span>
+                                <span class="skill-tag">Windows</span>
+                                <span class="skill-tag">Computer Hardware</span>
+                                <span class="skill-tag">MacOS</span>
+                            </div>
+                        </div>
 
-                      <!-- ARENA2036 -->
-                      <div class="experience-item">
-                          <div class="company-logo">
-                              <img src="/companies/Arena2036.jpg" alt="ARENA2036 logo" onerror="this.parentNode.innerHTML = 'AR'">
-                          </div>
-                          <div class="experience-header">
-                              <h3 class="job-title">IT Consultant</h3>
-                              <a href="https://www.arena2036.de" class="company-name" target="_blank" rel="noopener noreferrer">ARENA2036</a>
-                              <p class="job-duration">2016 - 2017 · 1 yr</p>
-                              <p class="job-location">Vaihingen an der Enz, Baden-Württemberg, Germany</p>
-                          </div>
-                          <div class="job-description">
-                              <ul>
-                                  <li>Directly supported management with technical issues and queries.</li>
-                                  <li>Served as a liaison to the Technical Information and Communication Services at the University of Stuttgart.</li>
-                              </ul>
-                          </div>
-                          <div class="skills-list">
-                              <span class="skill-tag">Linux</span>
-                              <span class="skill-tag">Windows</span>
-                              <span class="skill-tag">Computer Hardware</span>
-                              <span class="skill-tag">MacOS</span>
-                          </div>
-                      </div>
+                        <!-- Rieber GmbH & Co. KG -->
+                        <div class="experience-item">
+                            <div class="company-logo">
+                                <img src="/companies/Rieber.jpg" alt="Rieber GmbH & Co. KG logo"
+                                    onerror="this.parentNode.innerHTML = 'RG'">
+                            </div>
+                            <div class="experience-header">
+                                <h3 class="job-title">Software Developer</h3>
+                                <a href="https://www.rieber.de" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">Rieber GmbH & Co. KG</a>
+                                <p class="job-duration">2016 - 2017 · 1 yr</p>
+                                <p class="job-location">Reutlingen, Baden-Württemberg, Germany</p>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Assisted in the technical planning of new product prototypes.</li>
+                                    <li>Provided support in programming new products.</li>
+                                </ul>
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Internet of Things (IoT)</span>
+                                <span class="skill-tag">React.js</span>
+                            </div>
+                        </div>
 
-                      <!-- Rieber GmbH & Co. KG -->
-                      <div class="experience-item">
-                          <div class="company-logo">
-                              <img src="/companies/Rieber.jpg" alt="Rieber GmbH & Co. KG logo" onerror="this.parentNode.innerHTML = 'RG'">
-                          </div>
-                          <div class="experience-header">
-                              <h3 class="job-title">Software Developer</h3>
-                              <a href="https://www.rieber.de" class="company-name" target="_blank" rel="noopener noreferrer">Rieber GmbH & Co. KG</a>
-                              <p class="job-duration">2016 - 2017 · 1 yr</p>
-                              <p class="job-location">Reutlingen, Baden-Württemberg, Germany</p>
-                          </div>
-                          <div class="job-description">
-                              <ul>
-                                  <li>Assisted in the technical planning of new product prototypes.</li>
-                                  <li>Provided support in programming new products.</li>
-                              </ul>
-                          </div>
-                          <div class="skills-list">
-                              <span class="skill-tag">Node.js</span>
-                              <span class="skill-tag">Internet of Things (IoT)</span>
-                              <span class="skill-tag">React.js</span>
-                          </div>
-                      </div>
+                        <!-- Exxeta -->
+                        <div class="experience-item">
+                            <div class="company-logo">
+                                <img src="/companies/Exxeta.jpg" alt="Exxeta logo"
+                                    onerror="this.parentNode.innerHTML = 'EX'">
+                            </div>
+                            <div class="experience-header">
+                                <h3 class="job-title">Working Student</h3>
+                                <a href="https://www.exxeta.com" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">Exxeta</a>
+                                <p class="job-duration">Aug 2016 - Oct 2016 · 3 mos</p>
+                                <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Collaborated in a pair-programming setup on a project for a major automotive
+                                        industry client, identifying a critical base data inconsistency issue that was
+                                        subsequently presented to the client.</li>
+                                </ul>
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Pair Programming</span>
+                            </div>
+                        </div>
 
-                      <!-- Exxeta -->
-                      <div class="experience-item">
-                          <div class="company-logo">
-                              <img src="/companies/Exxeta.jpg" alt="Exxeta logo" onerror="this.parentNode.innerHTML = 'EX'">
-                          </div>
-                          <div class="experience-header">
-                              <h3 class="job-title">Working Student</h3>
-                              <a href="https://www.exxeta.com" class="company-name" target="_blank" rel="noopener noreferrer">Exxeta</a>
-                              <p class="job-duration">Aug 2016 - Oct 2016 · 3 mos</p>
-                              <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
-                          </div>
-                          <div class="job-description">
-                              <ul>
-                                  <li>Collaborated in a pair-programming setup on a project for a major automotive industry client, identifying a critical base data inconsistency issue that was subsequently presented to the client.</li>
-                              </ul>
-                          </div>
-                          <div class="skills-list">
-                              <span class="skill-tag">Java</span>
-                              <span class="skill-tag">Pair Programming</span>
-                          </div>
-                      </div>
+                        <!-- University of Stuttgart Research Assistant 1 -->
+                        <div class="experience-item">
+                            <div class="company-logo">
+                                <img src="/companies/RewUS-Uni-Stuttgart.jpg" alt="University of Stuttgart IVR logo"
+                                    onerror="this.parentNode.innerHTML = 'IVR'">
+                            </div>
+                            <div class="experience-header">
+                                <h3 class="job-title">Research Assistant</h3>
+                                <a href="https://ivr.uni-stuttgart.de" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">Institute of Economics and Law (IVR)</a>
+                                <p class="job-subtitle">University of Stuttgart</p>
+                                <p class="job-duration">2014 - 2016 · 2 yrs</p>
+                                <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Served as a technical liaison, aiding the team in understanding technical
+                                        aspects at the intersection of technology and law.</li>
+                                    <li>Provided support for all technical inquiries, facilitating effective
+                                        decision-making.</li>
+                                </ul>
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag">Technical Liaison</span>
+                                <span class="skill-tag">Technology and Law</span>
+                            </div>
+                        </div>
 
-                      <!-- University of Stuttgart Research Assistant 1 -->
-                      <div class="experience-item">
-                          <div class="company-logo">
-                              <img src="/companies/tik-Uni-Stuttgart.jpg" alt="University of Stuttgart logo" onerror="this.parentNode.innerHTML = 'US'">
-                          </div>
-                          <div class="experience-header">
-                              <h3 class="job-title">Research Assistant</h3>
-                              <a href="https://tik.uni-stuttgart.de" class="company-name" target="_blank" rel="noopener noreferrer">University of Stuttgart</a>
-                              <p class="job-duration">2014 - 2016 · 2 yrs</p>
-                              <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
-                          </div>
-                          <div class="job-description">
-                              <ul>
-                                  <li>Served as a technical liaison, aiding the team in understanding technical aspects at the intersection of technology and law.</li>
-                                  <li>Provided support for all technical inquiries, facilitating effective decision-making.</li>
-                              </ul>
-                          </div>
-                          <div class="skills-list">
-                              <span class="skill-tag">Technical Liaison</span>
-                              <span class="skill-tag">Technology and Law</span>
-                          </div>
-                      </div>
+                        <!-- University of Stuttgart Research Assistant 2 -->
+                        <div class="experience-item">
 
-                      <!-- University of Stuttgart Research Assistant 2 -->
-                      <div class="experience-item">
-                          <div class="company-logo">
-                              <img src="/companies/RewUS-Uni-Stuttgart.jpg" alt="University of Stuttgart logo" onerror="this.parentNode.innerHTML = 'US'">
-                          </div>
-                          <div class="experience-header">
-                              <h3 class="job-title">Research Assistant</h3>
-                              <a href="https://ivr.uni-stuttgart.de" class="company-name" target="_blank" rel="noopener noreferrer">University of Stuttgart</a>
-                              <p class="job-duration">2010 - 2014 · 4 yrs</p>
-                              <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
-                          </div>
-                          <div class="job-description">
-                              <ul>
-                                  <li>Led and coordinated a team of 14 research assistants.</li>
-                                  <li>Conducted regular, certified training sessions for academic staff.</li>
-                                  <li>Designed and developed targeted training materials for academic staff.</li>
-                              </ul>
-                          </div>
-                          <div class="skills-list">
-                              <span class="skill-tag">Team Leadership</span>
-                              <span class="skill-tag">Training</span>
-                              <span class="skill-tag">Material Development</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
+                            <div class="company-logo">
+                                <img src="/companies/tik-Uni-Stuttgart.jpg" alt="TIK University of Stuttgart logo"
+                                    onerror="this.parentNode.innerHTML = 'TIK'">
+                            </div>
+                            <div class="experience-header">
+                                <h3 class="job-title">Research Assistant</h3>
+                                <a href="https://tik.uni-stuttgart.de" class="company-name" target="_blank"
+                                    rel="noopener noreferrer">Technical Information and Communication Services (TIK)</a>
+                                <p class="job-subtitle">University of Stuttgart</p>
+                                <p class="job-duration">2010 - 2014 · 4 yrs</p>
+                                <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Led and coordinated a team of 14 research assistants.</li>
+                                    <li>Conducted regular, certified training sessions for academic staff.</li>
+                                    <li>Designed and developed targeted training materials for academic staff.</li>
+                                </ul>
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag">Team Leadership</span>
+                                <span class="skill-tag">Training</span>
+                                <span class="skill-tag">Material Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-          <section id="contact-section">
-              <div class="section-header">
-                  <h2 class="section-title">Contact Information</h2>
-                  <button class="toggle-btn" data-target="contact-content">
-                      Show Less
-                  </button>
-              </div>
-              <div class="section-content" id="contact-content">
-                  <div class="copy-container">
-                      <div class="copy-text">mail@perguth.de</div>
-                      <button class="copy-btn" data-copy="mail@perguth.de">Copy</button>
-                  </div>
-                  <div class="copy-container">
-                      <div class="copy-text">+49 711 217 244 42</div>
-                      <button class="copy-btn" data-copy="+4971121724442">Copy</button>
-                  </div>
-                  <div class="copy-container">
-                      <div class="copy-text">Per Guth
-c/o Thingylabs GmbH
-Hasenbergsteige 6
-70178 Stuttgart
-Germany</div>
-                      <button class="copy-btn" data-copy="Per Guth
+            <section id="contact-section">
+                <div class="section-header">
+                    <h2 class="section-title">Contact Information</h2>
+                    <button class="toggle-btn" data-target="contact-content">
+                        Show Less
+                    </button>
+                </div>
+                <div class="section-content" id="contact-content">
+                    <div class="copy-container">
+                        <div class="copy-text">mail@perguth.de</div>
+                        <button class="copy-btn" data-copy="mail@perguth.de">Copy</button>
+                    </div>
+                    <div class="copy-container">
+                        <div class="copy-text">+49 711 217 244 42</div>
+                        <button class="copy-btn" data-copy="+4971121724442">Copy</button>
+                    </div>
+                    <div class="copy-container">
+                        <div class="copy-text">Per Guth
+                            c/o Thingylabs GmbH
+                            Hasenbergsteige 6
+                            70178 Stuttgart
+                            Germany</div>
+                        <button class="copy-btn" data-copy="Per Guth
 c/o Thingylabs GmbH
 Hasenbergsteige 6
 70178 Stuttgart
 Germany">Copy</button>
-                  </div>
-              </div>
-          </section>
+                    </div>
+                </div>
+            </section>
 
-          <section id="links-section">
-              <div class="section-header">
-                  <h2 class="section-title">Professional Links</h2>
-                  <button class="toggle-btn" data-target="links-content">
-                      Show Less
-                  </button>
-              </div>
-              <div class="section-content" id="links-content">
-                  <div class="links-grid">
-                      <a href="https://blog.perguth.de" class="link-card" target="_blank" rel="noopener noreferrer">
-                          <h3 class="link-title">Blog</h3>
-                          <p class="link-description">Technical articles and insights</p>
-                          <span class="link-url">blog.perguth.de</span>
-                      </a>
-                      <a href="https://perguth.de/ideas/" class="link-card" target="_blank" rel="noopener noreferrer">
-                          <h3 class="link-title">Ideas</h3>
-                          <p class="link-description">Project concepts and innovations</p>
-                          <span class="link-url">perguth.de/ideas</span>
-                      </a>
-                      <a href="https://www.linkedin.com/in/perguth/" class="link-card" target="_blank" rel="noopener noreferrer">
-                          <h3 class="link-title">LinkedIn</h3>
-                          <p class="link-description">Professional profile and network</p>
-                          <span class="link-url">linkedin.com/in/perguth</span>
-                      </a>
-                      <a href="https://www.thingylabs.io" class="link-card" target="_blank" rel="noopener noreferrer">
-                          <h3 class="link-title">Thingylabs</h3>
-                          <p class="link-description">Software & Cloud Development</p>
-                          <span class="link-url">thingylabs.io</span>
-                      </a>
-                      <a href="https://bsky.app/profile/perguth.d3v.ltd" class="link-card" target="_blank" rel="noopener noreferrer">
-                          <h3 class="link-title">Bluesky</h3>
-                          <p class="link-description">Professional updates and insights</p>
-                          <span class="link-url">bsky.app/profile/perguth.d3v.ltd</span>
-                      </a>
-                      <a href="https://perguth.de/pay" class="link-card" target="_blank" rel="noopener noreferrer">
-                          <h3 class="link-title">Payment</h3>
-                          <p class="link-description">Secure payment options</p>
-                          <span class="link-url">perguth.de/pay</span>
-                      </a>
-                  </div>
-              </div>
-          </section>
+            <section id="links-section">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Links</h2>
+                    <button class="toggle-btn" data-target="links-content">
+                        Show Less
+                    </button>
+                </div>
+                <div class="section-content" id="links-content">
+                    <div class="links-grid">
+                        <a href="https://blog.perguth.de" class="link-card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="link-title">Blog</h3>
+                            <p class="link-description">Technical articles and insights</p>
+                            <span class="link-url">blog.perguth.de</span>
+                        </a>
+                        <a href="https://perguth.de/ideas/" class="link-card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="link-title">Ideas</h3>
+                            <p class="link-description">Project concepts and innovations</p>
+                            <span class="link-url">perguth.de/ideas</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/perguth/" class="link-card" target="_blank"
+                            rel="noopener noreferrer">
+                            <h3 class="link-title">LinkedIn</h3>
+                            <p class="link-description">Professional profile and network</p>
+                            <span class="link-url">linkedin.com/in/perguth</span>
+                        </a>
+                        <a href="https://www.thingylabs.io" class="link-card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="link-title">Thingylabs</h3>
+                            <p class="link-description">Software & Cloud Development</p>
+                            <span class="link-url">thingylabs.io</span>
+                        </a>
+                        <a href="https://bsky.app/profile/perguth.d3v.ltd" class="link-card" target="_blank"
+                            rel="noopener noreferrer">
+                            <h3 class="link-title">Bluesky</h3>
+                            <p class="link-description">Professional updates and insights</p>
+                            <span class="link-url">bsky.app/profile/perguth.d3v.ltd</span>
+                        </a>
+                        <a href="https://perguth.de/pay" class="link-card" target="_blank" rel="noopener noreferrer">
+                            <h3 class="link-title">Payment</h3>
+                            <p class="link-description">Secure payment options</p>
+                            <span class="link-url">perguth.de/pay</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-          <section id="skills-section">
-              <div class="section-header">
-                  <h2 class="section-title">Skills & Expertise</h2>
-                  <button class="toggle-btn" data-target="skills-content">
-                      Show Less
-                  </button>
-              </div>
-              <div class="section-content" id="skills-content">
-                  <div class="skills-list">
-                      <span class="skill-tag">Node.js</span>
-                      <span class="skill-tag">TypeScript</span>
-                      <span class="skill-tag">React.js</span>
-                      <span class="skill-tag">Docker</span>
-                      <span class="skill-tag">Kubernetes</span>
-                      <span class="skill-tag">Cloud</span>
-                      <span class="skill-tag">Full-Stack Development</span>
-                      <span class="skill-tag">PostgreSQL</span>
-                      <span class="skill-tag">Cypress.io</span>
-                      <span class="skill-tag">Internet of Things (IoT)</span>
-                      <span class="skill-tag">Deno</span>
-                      <span class="skill-tag">Cloudflare</span>
-                      <span class="skill-tag">International Business</span>
-                      <span class="skill-tag">Quality Assurance</span>
-                      <span class="skill-tag">Home Automation</span>
-                      <span class="skill-tag">Legal Compliance</span>
-                      <span class="skill-tag">Commercial Operation</span>
-                      <span class="skill-tag">Company Set-up</span>
-                      <span class="skill-tag">Brand Development</span>
-                      <span class="skill-tag">Human Resources</span>
-                      <span class="skill-tag">Interdisciplinary Collaboration</span>
-                      <span class="skill-tag">Technical Planning</span>
-                      <span class="skill-tag">Linux</span>
-                      <span class="skill-tag">Windows</span>
-                      <span class="skill-tag">MacOS</span>
-                      <span class="skill-tag">Computer Hardware</span>
-                      <span class="skill-tag">Java</span>
-                      <span class="skill-tag">Pair Programming</span>
-                      <span class="skill-tag">Team Leadership</span>
-                      <span class="skill-tag">Training</span>
-                      <span class="skill-tag">Material Development</span>
-                  </div>
-              </div>
-          </section>
-      </div>
-  </main>
+            <section id="skills-section">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <button class="toggle-btn" data-target="skills-content">
+                        Show Less
+                    </button>
+                </div>
+                <div class="section-content" id="skills-content">
+                    <div class="skills-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Cloud</span>
+                        <span class="skill-tag">Full-Stack Development</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Cypress.io</span>
+                        <span class="skill-tag">Internet of Things (IoT)</span>
+                        <span class="skill-tag">Deno</span>
+                        <span class="skill-tag">Cloudflare</span>
+                        <span class="skill-tag">International Business</span>
+                        <span class="skill-tag">Quality Assurance</span>
+                        <span class="skill-tag">Home Automation</span>
+                        <span class="skill-tag">Legal Compliance</span>
+                        <span class="skill-tag">Commercial Operation</span>
+                        <span class="skill-tag">Company Set-up</span>
+                        <span class="skill-tag">Brand Development</span>
+                        <span class="skill-tag">Human Resources</span>
+                        <span class="skill-tag">Interdisciplinary Collaboration</span>
+                        <span class="skill-tag">Technical Planning</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">MacOS</span>
+                        <span class="skill-tag">Computer Hardware</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Pair Programming</span>
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Training</span>
+                        <span class="skill-tag">Material Development</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 
-  <footer>
-      <div class="container">
-          <p>© 2025 Per Guth. All rights reserved.</p>
-          <div class="footer-links">
-              <a href="https://github.com/perguth/perguth.github.io" class="footer-link" target="_blank" rel="noopener noreferrer">&lt;/src&gt;</a>
-              <a href="https://perguth.de/imprint" class="footer-link" target="_blank" rel="noopener noreferrer">Imprint</a>
-              <a href="https://perguth.de/legacy" class="footer-link" target="_blank" rel="noopener noreferrer">Legacy</a>
+    <footer>
+        <div class="container">
+            <p>© 2025 Per Guth. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/perguth/perguth.github.io" class="footer-link" target="_blank"
+                    rel="noopener noreferrer">&lt;/src&gt;</a>
+                <a href="https://perguth.de/imprint" class="footer-link" target="_blank"
+                    rel="noopener noreferrer">Imprint</a>
+                <a href="https://perguth.de/legacy" class="footer-link" target="_blank"
+                    rel="noopener noreferrer">Legacy</a>
             </div>
-      </div>
-  </footer>
+        </div>
+    </footer>
 
-  <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          // Theme toggle functionality
-          const themeToggle = document.getElementById('theme-toggle');
-          const sunIcon = themeToggle.querySelector('.sun-icon');
-          const moonIcon = themeToggle.querySelector('.moon-icon');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            const sunIcon = themeToggle.querySelector('.sun-icon');
+            const moonIcon = themeToggle.querySelector('.moon-icon');
 
-          // Check for saved theme preference or use preferred color scheme
-          const savedTheme = localStorage.getItem('theme');
-          if (savedTheme === 'dark') {
-              document.documentElement.setAttribute('data-theme', 'dark');
-              sunIcon.style.display = 'none';
-              moonIcon.style.display = 'block';
-          } else if (savedTheme === 'light') {
-              document.documentElement.setAttribute('data-theme', 'light');
-              sunIcon.style.display = 'block';
-              moonIcon.style.display = 'none';
-          } else {
-              // Use system preference by default
-              if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                  document.documentElement.setAttribute('data-theme', 'dark');
-                  sunIcon.style.display = 'none';
-                  moonIcon.style.display = 'block';
-              }
-          }
+            // Check for saved theme preference or use preferred color scheme
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                // Use system preference by default
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    sunIcon.style.display = 'none';
+                    moonIcon.style.display = 'block';
+                }
+            }
 
-          // Toggle theme when button is clicked
-          themeToggle.addEventListener('click', function() {
-              if (document.documentElement.getAttribute('data-theme') === 'dark') {
-                  document.documentElement.setAttribute('data-theme', 'light');
-                  localStorage.setItem('theme', 'light');
-                  sunIcon.style.display = 'block';
-                  moonIcon.style.display = 'none';
-              } else {
-                  document.documentElement.setAttribute('data-theme', 'dark');
-                  localStorage.setItem('theme', 'dark');
-                  sunIcon.style.display = 'none';
-                  moonIcon.style.display = 'block';
-              }
-          });
+            // Toggle theme when button is clicked
+            themeToggle.addEventListener('click', function () {
+                if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                    sunIcon.style.display = 'block';
+                    moonIcon.style.display = 'none';
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    sunIcon.style.display = 'none';
+                    moonIcon.style.display = 'block';
+                }
+            });
 
-          // Toggle sections
-          const toggleButtons = document.querySelectorAll('.toggle-btn');
+            // Toggle sections
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
 
-          toggleButtons.forEach(button => {
-              button.addEventListener('click', function() {
-                  const targetId = this.getAttribute('data-target');
-                  const targetContent = document.getElementById(targetId);
-                  const parentSection = this.closest('section');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-target');
+                    const targetContent = document.getElementById(targetId);
+                    const parentSection = this.closest('section');
 
-                  if (parentSection.classList.contains('collapsed')) {
-                      parentSection.classList.remove('collapsed');
-                      this.textContent = 'Show Less';
-                  } else {
-                      parentSection.classList.add('collapsed');
-                      this.textContent = 'Show More';
-                  }
-              });
-          });
+                    if (parentSection.classList.contains('collapsed')) {
+                        parentSection.classList.remove('collapsed');
+                        this.textContent = 'Show Less';
+                    } else {
+                        parentSection.classList.add('collapsed');
+                        this.textContent = 'Show More';
+                    }
+                });
+            });
 
-          // Copy functionality
-          const copyButtons = document.querySelectorAll('.copy-btn');
+            // Copy functionality
+            const copyButtons = document.querySelectorAll('.copy-btn');
 
-          copyButtons.forEach(button => {
-              button.addEventListener('click', function() {
-                  const textToCopy = this.getAttribute('data-copy');
-                  navigator.clipboard.writeText(textToCopy).then(() => {
-                      const originalText = this.textContent;
-                      this.textContent = 'Copied!';
-                      this.classList.add('success');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const textToCopy = this.getAttribute('data-copy');
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        const originalText = this.textContent;
+                        this.textContent = 'Copied!';
+                        this.classList.add('success');
 
-                      setTimeout(() => {
-                          this.textContent = originalText;
-                          this.classList.remove('success');
-                      }, 2000);
-                  });
-              });
-          });
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.classList.remove('success');
+                        }, 2000);
+                    });
+                });
+            });
 
-          // Initialize all sections as expanded
-          const sections = document.querySelectorAll('section');
-          sections.forEach(section => {
-              section.classList.remove('collapsed');
-          });
-      });
-  </script>
+            // Initialize all sections as expanded
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('collapsed');
+            });
+        });
+    </script>
 </body>
+
 </html>
