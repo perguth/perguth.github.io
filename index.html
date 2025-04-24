@@ -1423,6 +1423,41 @@ Germany">Copy</button>
     <footer class="social-footer">
         <div class="social-container">
             <div class="social-links">
+                <!-- validator.w3.org-disable-next-line Element style not allowed as child of element div in this context. -->
+                <style>
+                    .beeper-logo {
+                      color: unset !important;
+                    }
+                    
+                    .beeper-logo circle {
+                      stroke: none;
+                    }
+                    
+                    /* Add a subtle hover effect */
+                    .pro-link:hover .beeper-logo rect,
+                    .pro-link:focus .beeper-logo rect {
+                      fill: #9333ea;
+                      stroke: #9333ea;
+                    }
+                </style>
+                <a href="https://beeper.com/@perguth" class="pro-link" rel="noopener noreferrer">
+                  <div class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="beeper-logo">
+                      <rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="#7e22ce" stroke="#7e22ce"></rect>
+                      <circle cx="8" cy="10" r="1" fill="white"></circle>
+                      <circle cx="12" cy="10" r="1" fill="white"></circle>
+                      <circle cx="16" cy="10" r="1" fill="white"></circle>
+                      <circle cx="8" cy="14" r="1" fill="white"></circle>
+                      <circle cx="12" cy="14" r="1" fill="white"></circle>
+                      <circle cx="16" cy="14" r="1" fill="white"></circle>
+                    </svg>
+                  </div>
+                  <div class="link-content">
+                    <h3>Beeper</h3>
+                    <p>@perguth:beeper.com</p>
+                  </div>
+                </a>
+                
                 <a href="https://github.com/perguth" class="social-link" aria-label="GitHub Profile"
                     rel="noopener noreferrer me">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
