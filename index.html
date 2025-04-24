@@ -119,7 +119,7 @@
         h1 {
             font-family: "Jost", sans-serif;
             font-size: 3.75rem;
-            letter-spacing: 0.365rem;
+            letter-spacing: 0.365rem;b
             font-weight: normal;
             color: var(--text);
             line-height: 1.2;
@@ -1337,21 +1337,21 @@ Germany">Copy</button>
         .social-footer {
             padding: 0.125rem 0 1rem;
         }
-
+    
         .social-container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 1rem;
             text-align: center;
         }
-
+    
         .social-heading {
             font-size: 1.25rem;
             font-weight: 500;
             margin-bottom: 1.5rem;
             color: var(--text);
         }
-
+    
         .social-links {
             opacity: 0.75;
             padding-top: 1.25rem;
@@ -1360,7 +1360,7 @@ Germany">Copy</button>
             justify-content: center;
             gap: 1rem;
         }
-
+    
         .social-link {
             display: flex;
             flex-direction: column;
@@ -1373,86 +1373,164 @@ Germany">Copy</button>
             width: 5rem;
             position: relative;
         }
-
+    
         .social-link:hover,
         .social-link:focus {
             background-color: var(--background-alt);
             color: var(--accent);
             outline: none;
         }
-
+    
         .social-link:focus-visible {
             box-shadow: 0 0 0 2px var(--accent);
         }
-
+    
         .social-link svg {
             width: 1.5rem;
             height: 1.5rem;
             margin-bottom: 0.5rem;
             transition: transform 0.2s ease;
         }
-
+    
         .social-link:hover svg,
         .social-link:focus svg {
             transform: translateY(-2px);
         }
-
+    
         .social-text {
             font-size: 0.75rem;
             font-weight: 400;
         }
-
+    
+        /* Beeper Pro Link Styling */
+        .pro-link {
+            display: flex;
+            align-items: center;
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            margin-bottom: 1rem;
+            width: 100%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .pro-link:hover,
+        .pro-link:focus {
+            background-color: var(--background-alt);
+            outline: none;
+        }
+    
+        .pro-link:focus-visible {
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+    
+        .link-icon {
+            flex-shrink: 0;
+            margin-right: 1rem;
+        }
+    
+        .link-icon svg {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    
+        .link-content {
+            text-align: left;
+        }
+    
+        .link-content h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0 0 0.25rem 0;
+        }
+    
+        .link-content p {
+            font-size: 0.85rem;
+            margin: 0;
+            color: var(--text-light);
+        }
+    
+        .beeper-logo {
+            color: unset !important;
+        }
+    
+        .beeper-logo circle {
+            stroke: none;
+        }
+    
+        /* Add a subtle hover effect */
+        .pro-link:hover .beeper-logo rect,
+        .pro-link:focus .beeper-logo rect {
+            fill: #9333ea;
+            stroke: #9333ea;
+        }
+    
         .copyright {
             margin-top: 2rem;
             text-align: center;
             font-size: 0.85rem;
             color: var(--text-light);
         }
-
+    
         .copyright a {
             color: var(--accent);
             text-decoration: none;
             transition: opacity 0.2s ease;
         }
-
+    
         .copyright a:hover,
         .copyright a:focus {
             opacity: 0.8;
             text-decoration: underline;
         }
-
+    
         /* Accessibility improvements */
         @media (prefers-reduced-motion: reduce) {
-
             .social-link,
-            .social-link svg {
+            .social-link svg,
+            .pro-link {
                 transition: none;
             }
-
+    
             .social-link:hover svg,
             .social-link:focus svg {
                 transform: none;
             }
         }
-
+    
         /* High contrast mode support */
         @media (forced-colors: active) {
-
             .social-link:hover,
-            .social-link:focus {
+            .social-link:focus,
+            .pro-link:hover,
+            .pro-link:focus {
                 outline: 2px solid CanvasText;
             }
         }
-
+    
         /* Responsive adjustments */
         @media (max-width: 640px) {
             .social-links {
                 gap: 0.5rem;
             }
-
+    
             .social-link {
                 width: 4.5rem;
                 padding: 0.5rem;
+            }
+    
+            .pro-link {
+                padding: 0.5rem;
+                max-width: 280px;
+            }
+    
+            .link-icon svg {
+                width: 2rem;
+                height: 2rem;
             }
         }
     </style>
