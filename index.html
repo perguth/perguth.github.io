@@ -1614,137 +1614,108 @@ Germany">Copy</button>
                 <div class="social-column-left">
                     <!-- validator.w3.org-disable-next-line Element style not allowed as child of element div in this context. -->
                     <style>
-                        /* Enhanced Beeper Link Styling */
                         .pro-link {
+                            display: block;
+                            text-decoration: none;
+                            color: inherit;
+                            margin: 0 auto;
+                            max-width: 300px;
+                        }
+                        
+                        .beeper-card {
+                            display: flex;
+                            flex-direction: row;
+                            background-color: #f9f5ff;
+                            border-radius: 12px;
+                            padding: 16px;
+                            margin-bottom: 20px;
+                            transition: transform 0.2s, box-shadow 0.2s;
+                        }
+                        
+                        .pro-link:hover .beeper-card {
+                            transform: translateY(-2px);
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+                        }
+                        
+                        .beeper-logo-container {
+                            flex: 0 0 auto;
+                            margin-right: 16px;
+                        }
+                        
+                        .beeper-logo {
+                            width: 48px;
+                            height: 48px;
+                        }
+                        
+                        .beeper-info {
+                            flex: 1;
                             display: flex;
                             flex-direction: column;
-                            align-items: center;
-                            color: var(--text);
-                            text-decoration: none;
-                            padding: 1.25rem;
-                            border-radius: 12px;
-                            transition: all 0.3s ease;
-                            width: 100%;
-                            max-width: 250px;
-                            background-color: rgba(126, 34, 206, 0.05);
-                            border: 1px solid rgba(126, 34, 206, 0.1);
-                            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-                        }
-                        
-                        .pro-link:hover,
-                        .pro-link:focus {
-                            background-color: rgba(126, 34, 206, 0.1);
-                            transform: translateY(-2px);
-                            box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.1);
-                        }
-                        
-                        .link-icon {
-                            margin-bottom: 1.25rem;
-                            transition: transform 0.3s ease;
-                        }
-                        
-                        .pro-link:hover .link-icon {
-                            transform: scale(1.05);
-                        }
-                        
-                        .link-icon svg {
-                            width: 4rem;
-                            height: 4rem;
-                            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-                        }
-                        
-                        .link-content {
-                            text-align: center;
-                            width: 100%;
+                            justify-content: center;
                         }
                         
                         .beeper-title {
-                            font-size: 1.2rem;
+                            font-size: 18px;
                             font-weight: 600;
-                            color: var(--text);
-                            text-decoration: none;
-                            letter-spacing: 0.01em;
-                            transition: color 0.2s ease;
+                            color: #333;
+                            margin-bottom: 4px;
                         }
                         
-                        .beeper-domain {
+                        .beeper-com {
                             font-weight: 400;
                             opacity: 0.7;
                         }
                         
-                        .beeper-title:hover {
-                            color: #7e22ce;
-                        }
-                        
-                        .matrix-id {
-                            font-size: 0.85rem;
-                            margin: 0.5rem 0;
-                            color: var(--text-light);
+                        .beeper-id {
+                            font-size: 14px;
+                            color: #666;
+                            margin-bottom: 8px;
                             font-family: monospace;
-                            background-color: rgba(0, 0, 0, 0.03);
-                            padding: 0.25rem 0.5rem;
-                            border-radius: 4px;
-                            display: inline-block;
                         }
                         
-                        .beeper-ad {
-                            font-size: 0.9rem !important;
-                            color: #22c55e !important;
-                            margin: 0.75rem 0 0 !important;
-                            line-height: 1.4;
-                            font-weight: 400 !important;
-                            letter-spacing: 0.01em;
+                        .beeper-tagline {
+                            font-size: 14px;
+                            color: #22c55e;
+                            font-weight: 500;
                         }
                         
-                        .beeper-highlight {
-                            font-weight: 600;
-                        }
-                        
-                        /* For dark mode compatibility */
+                        /* Dark mode */
                         @media (prefers-color-scheme: dark) {
-                            .pro-link {
-                                background-color: rgba(147, 51, 234, 0.1);
-                                border-color: rgba(147, 51, 234, 0.2);
-                                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+                            .beeper-card {
+                                background-color: rgba(126, 34, 206, 0.1);
                             }
                         
-                            .pro-link:hover,
-                            .pro-link:focus {
-                                background-color: rgba(147, 51, 234, 0.15);
-                                box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.25);
+                            .beeper-title {
+                                color: #f5f5f5;
                             }
                         
-                            .matrix-id {
-                                background-color: rgba(255, 255, 255, 0.05);
+                            .beeper-id {
+                                color: #aaa;
                             }
                         
-                            .beeper-ad {
-                                color: #4ade80 !important;
+                            .beeper-tagline {
+                                color: #4ade80;
                             }
                         }
                     </style>
                     <a href="https://matrix.to/#/@perguth:beeper.com" class="pro-link" rel="noopener noreferrer me">
-                        <div class="link-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="beeper-logo">
-                                <rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="#7e22ce" stroke="#7e22ce"></rect>
-                                <circle cx="8" cy="10" r="1" fill="white"></circle>
-                                <circle cx="12" cy="10" r="1" fill="white"></circle>
-                                <circle cx="16" cy="10" r="1" fill="white"></circle>
-                                <circle cx="8" cy="14" r="1" fill="white"></circle>
-                                <circle cx="12" cy="14" r="1" fill="white"></circle>
-                                <circle cx="16" cy="14" r="1" fill="white"></circle>
-                            </svg>
-                        </div>
-                        <div class="link-content">
-                            <h3>
-                                <a aria-label="Beeper.com" href="https://beeper.com/" rel="noopener noreferrer" class="beeper-title">
-                                    Beeper<span class="beeper-domain">.com</span>
-                                </a>
-                            </h3>
-                            <p class="matrix-id">@perguth:beeper.com</p>
-                            <p class="beeper-ad">
-                                <span class="beeper-highlight">One app</span> for all your chats
-                            </p>
+                        <div class="beeper-card">
+                            <div class="beeper-logo-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="beeper-logo">
+                                    <rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="#7e22ce" stroke="#7e22ce"></rect>
+                                    <circle cx="8" cy="10" r="1" fill="white"></circle>
+                                    <circle cx="12" cy="10" r="1" fill="white"></circle>
+                                    <circle cx="16" cy="10" r="1" fill="white"></circle>
+                                    <circle cx="8" cy="14" r="1" fill="white"></circle>
+                                    <circle cx="12" cy="14" r="1" fill="white"></circle>
+                                    <circle cx="16" cy="14" r="1" fill="white"></circle>
+                                </svg>
+                            </div>
+                            <div class="beeper-info">
+                                <div class="beeper-title">Beeper<span class="beeper-com">.com</span></div>
+                                <div class="beeper-id">@perguth:beeper.com</div>
+                                <div class="beeper-tagline">One app for all your chats</div>
+                            </div>
                         </div>
                     </a>
                 </div>
