@@ -151,7 +151,6 @@
             font-family: "Jost", sans-serif;
             font-size: 3.75rem;
             letter-spacing: 0.365rem;
-            b font-weight: normal;
             color: var(--text);
             line-height: 1.2;
         }
@@ -683,7 +682,7 @@
                         .ticker-content {
                             display: inline-block;
                             white-space: nowrap;
-                            animation: ticker 60s linear infinite;
+                            animation: ticker 256s linear infinite;
                             /* Much slower animation */
                             padding-left: 100%;
                             animation-delay: -30s;
@@ -693,13 +692,13 @@
 
                         .ticker-item {
                             display: inline-block;
-                            padding: 0 2rem;
+                            padding: 0;
                             color: var(--accent);
                             font-size: 0.85rem;
                             font-weight: 500;
                             text-decoration: none;
                             position: relative;
-                            max-width: 400px;
+                            max-width: 1280px;
                             overflow: hidden;
                             text-overflow: ellipsis;
                             white-space: nowrap;
@@ -778,13 +777,13 @@
                                     const items = data.querySelectorAll('item');
                                     let tickerHTML = '';
 
-                                    // Get the 5 most recent posts
-                                    const recentItems = Array.from(items).slice(0, 5);
+                                    // Get the 25 most recent posts
+                                    const recentItems = Array.from(items).slice(0, 25);
 
                                     recentItems.forEach(item => {
                                         const title = item.querySelector('title').textContent;
                                         const link = item.querySelector('link').textContent;
-                                        tickerHTML += `<a href="${link}" class="ticker-item" target="_blank" rel="noopener noreferrer">— ${title}</a>`;
+                                        tickerHTML += `<a href="${link}" class="ticker-item" target="_blank" rel="noopener noreferrer">&nbsp;| ${title}</a>`;
                                     });
 
                                     // Duplicate items to ensure smooth looping
@@ -792,7 +791,7 @@
                                 })
                                 .catch(error => {
                                     console.error('Error fetching RSS feed:', error);
-                                    tickerContent.innerHTML = '<span class="ticker-item">— Check out my latest blog posts at blog.perguth.de</span>';
+                                    tickerContent.innerHTML = '<span class="ticker-item">&nbsp;// Check out my latest blog posts at blog.perguth.de</span>';
                                 });
                         });
                     </script>
