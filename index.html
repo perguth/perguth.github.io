@@ -27,22 +27,22 @@
 
         /* latin */
         @font-face {
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 400;
-          font-display: swap;
-          src: url(/vendor/inter-400.woff2) format('woff2');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(/vendor/inter-400.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
 
         /* latin */
         @font-face {
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 600;
-          font-display: swap;
-          src: url(/vendor/inter-600.woff2) format('woff2');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(/vendor/inter-600.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
     </style>
 
@@ -51,17 +51,28 @@
             /* Theme variables */
             --serif: 'Crimson Pro', Georgia, serif;
             --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            --accent: #0a66c2;
-            --text: #121212;
-            --text-light: #444444;
-            --text-muted: #6b6b6b;
+            --accent: #0056b3;
+            /* Darker blue for better contrast */
+            --text: #000000;
+            /* Pure black for maximum readability */
+            --text-light: #333333;
+            /* Darker gray for better contrast */
+            --text-muted: #555555;
+            /* Slightly darker muted text */
             --background: #ffffff;
-            --background-alt: #f5f5f5;
+            /* White background */
+            --background-alt: #f9f9f9;
+            /* Slightly lighter background for contrast */
             --card-bg: #ffffff;
-            --border: #d0d0d0;
-            --border-light: #e0e0e0;
-            --shadow: rgba(0, 0, 0, 0.08);
+            /* White card background */
+            --border: #cccccc;
+            /* Medium gray border */
+            --border-light: #dddddd;
+            /* Light gray border */
+            --shadow: rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for depth */
         }
+
 
         [data-theme="dark"] {
             --accent: #4d9fff;
@@ -139,8 +150,8 @@
         h1 {
             font-family: "Jost", sans-serif;
             font-size: 3.75rem;
-            letter-spacing: 0.365rem;b
-            font-weight: normal;
+            letter-spacing: 0.365rem;
+            b font-weight: normal;
             color: var(--text);
             line-height: 1.2;
         }
@@ -620,6 +631,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
@@ -1269,7 +1281,8 @@ Germany">Copy</button>
                             <p class="link-description">Professional profile and network</p>
                             <span class="link-url">linkedin.com/in/perguth</span>
                         </a>
-                        <a href="https://github.com/perguth" class="link-card" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/perguth" class="link-card" target="_blank"
+                            rel="noopener noreferrer">
                             <h3 class="link-title">Github</h3>
                             <p class="link-description">Open source projects and code</p>
                             <span class="link-url">github.com/perguth</span>
@@ -1340,20 +1353,20 @@ Germany">Copy</button>
         .social-footer {
             padding: 0.125rem 0 1rem;
         }
-    
+
         .social-container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-    
+
         /* Two-column layout container */
         .social-columns {
             display: flex;
             flex-wrap: wrap;
             opacity: 0.75;
         }
-    
+
         /* Left column - Beeper */
         .social-column-left {
             flex: 1;
@@ -1361,7 +1374,7 @@ Germany">Copy</button>
             justify-content: center;
             align-items: flex-start;
         }
-    
+
         /* Right column - Other social links */
         .social-column-right {
             flex: 2;
@@ -1371,7 +1384,7 @@ Germany">Copy</button>
             gap: 1rem;
             justify-content: center;
         }
-    
+
         /* Social links grid */
         .social-links {
             display: flex;
@@ -1380,7 +1393,7 @@ Germany">Copy</button>
             gap: 1rem;
             width: 100%;
         }
-    
+
         .social-link {
             display: flex;
             flex-direction: column;
@@ -1393,35 +1406,35 @@ Germany">Copy</button>
             width: 5rem;
             position: relative;
         }
-    
+
         .social-link:hover,
         .social-link:focus {
             background-color: var(--background-alt);
             color: var(--accent);
             outline: none;
         }
-    
+
         .social-link:focus-visible {
             box-shadow: 0 0 0 2px var(--accent);
         }
-    
+
         .social-link svg {
             width: 1.5rem;
             height: 1.5rem;
             margin-bottom: 0.5rem;
             transition: transform 0.2s ease;
         }
-    
+
         .social-link:hover svg,
         .social-link:focus svg {
             transform: translateY(-2px);
         }
-    
+
         .social-text {
             font-size: 0.75rem;
             font-weight: 400;
         }
-    
+
         /* Beeper Pro Link Styling */
         .pro-link {
             display: flex;
@@ -1435,131 +1448,136 @@ Germany">Copy</button>
             background-color: rgba(126, 34, 206, 0.05);
             border: 1px solid rgba(126, 34, 206, 0.1);
         }
-    
+
         .pro-link:hover,
         .pro-link:focus {
             background-color: rgba(126, 34, 206, 0.1);
             outline: none;
         }
-    
+
         .pro-link:focus-visible {
             box-shadow: 0 0 0 2px var(--accent);
         }
-    
+
         .link-icon {
             margin-bottom: 1rem;
         }
-    
+
         .link-icon svg {
             width: 3.5rem;
             height: 3.5rem;
         }
-    
+
         .link-content {
             text-align: center;
             width: 100%;
         }
-    
+
         .link-content h3 {
             font-size: 1.1rem;
             font-weight: 500;
             margin: 0 0 0.5rem 0;
         }
-    
+
         .link-content h3 a {
             color: var(--text);
             text-decoration: none;
         }
-    
+
         .link-content h3 a:hover {
             text-decoration: underline;
         }
-    
+
         .link-content p {
             font-size: 0.85rem;
             margin: 0 0 0.5rem 0;
             color: var(--text-light);
         }
-    
+
         .link-content p:last-child {
             margin-bottom: 0;
         }
-    
+
         .beeper-logo {
             color: unset !important;
         }
-    
+
         .beeper-logo circle {
             stroke: none;
         }
-    
+
         /* Add a subtle hover effect */
         .pro-link:hover .beeper-logo rect,
         .pro-link:focus .beeper-logo rect {
             fill: #9333ea;
             stroke: #9333ea;
         }
-    
+
         .beeper-ad {
             font-size: 0.85rem !important;
-            color: #22c55e !important; /* Green color */
+            color: #22c55e !important;
+            /* Green color */
             margin: 0.5rem 0 !important;
             line-height: 1.3;
-            font-weight: 500 !important; /* Slightly bolder to stand out */
+            font-weight: 500 !important;
+            /* Slightly bolder to stand out */
         }
-    
+
         /* For dark mode compatibility */
         @media (prefers-color-scheme: dark) {
             .pro-link {
                 background-color: rgba(147, 51, 234, 0.1);
                 border-color: rgba(147, 51, 234, 0.2);
             }
-    
+
             .pro-link:hover,
             .pro-link:focus {
                 background-color: rgba(147, 51, 234, 0.15);
             }
-    
+
             .beeper-ad {
-                color: #4ade80 !important; /* Lighter green for dark mode */
+                color: #4ade80 !important;
+                /* Lighter green for dark mode */
             }
         }
-    
+
         .copyright {
             margin-top: 2rem;
             text-align: center;
             font-size: 0.85rem;
             color: var(--text-light);
         }
-    
+
         .copyright a {
             color: var(--accent);
             text-decoration: none;
             transition: opacity 0.2s ease;
         }
-    
+
         .copyright a:hover,
         .copyright a:focus {
             opacity: 0.8;
             text-decoration: underline;
         }
-    
+
         /* Accessibility improvements */
         @media (prefers-reduced-motion: reduce) {
+
             .social-link,
             .social-link svg,
             .pro-link {
                 transition: none;
             }
-    
+
             .social-link:hover svg,
             .social-link:focus svg {
                 transform: none;
             }
         }
-    
+
         /* High contrast mode support */
         @media (forced-colors: active) {
+
             .social-link:hover,
             .social-link:focus,
             .pro-link:hover,
@@ -1567,44 +1585,44 @@ Germany">Copy</button>
                 outline: 2px solid CanvasText;
             }
         }
-    
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .social-columns {
                 flex-direction: column;
                 gap: 2rem;
             }
-    
+
             .social-column-left {
                 width: 100%;
             }
-    
+
             .social-column-right {
                 width: 100%;
             }
         }
-    
+
         @media (max-width: 640px) {
             .social-links {
                 gap: 0.5rem;
             }
-    
+
             .social-link {
                 width: 4.5rem;
                 padding: 0.5rem;
             }
-    
+
             .pro-link {
                 padding: 0.75rem;
             }
-    
+
             .link-icon svg {
                 width: 3rem;
                 height: 3rem;
             }
         }
     </style>
-    
+
     <footer class="social-footer">
         <div class="social-container">
             <div class="social-columns">
@@ -1621,7 +1639,7 @@ Germany">Copy</button>
                             min-width: 333px;
                             transition: transform 0.2s ease;
                         }
-                    
+
                         .beeper-card {
                             display: flex;
                             flex-direction: row;
@@ -1634,13 +1652,13 @@ Germany">Copy</button>
                             border: 1px solid rgba(126, 34, 206, 0.12);
                             transition: all 0.3s ease;
                         }
-                    
+
                         .pro-link:hover .beeper-card {
                             transform: translateY(-3px);
                             box-shadow: 0 8px 20px rgba(126, 34, 206, 0.12);
                             border-color: rgba(126, 34, 206, 0.2);
                         }
-                    
+
                         .beeper-logo-container {
                             flex: 0 0 auto;
                             margin-right: 20px;
@@ -1650,24 +1668,24 @@ Germany">Copy</button>
                             box-shadow: 0 2px 6px rgba(126, 34, 206, 0.1);
                             transition: transform 0.3s ease;
                         }
-                    
+
                         .pro-link:hover .beeper-logo-container {
                             transform: scale(1.05);
                         }
-                    
+
                         .beeper-logo {
                             width: 52px;
                             height: 52px;
                             filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
                         }
-                    
+
                         .beeper-info {
                             flex: 1;
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                         }
-                    
+
                         .beeper-title {
                             font-size: 20px;
                             font-weight: 600;
@@ -1675,13 +1693,13 @@ Germany">Copy</button>
                             margin-bottom: 6px;
                             letter-spacing: -0.01em;
                         }
-                    
+
                         .beeper-com {
                             font-weight: 400;
                             opacity: 0.7;
                             letter-spacing: normal;
                         }
-                    
+
                         .beeper-id {
                             font-size: 14px;
                             color: #666;
@@ -1693,14 +1711,14 @@ Germany">Copy</button>
                             display: inline-block;
                             max-width: fit-content;
                         }
-                    
+
                         .beeper-tagline {
                             font-size: 15px;
                             color: #22c55e;
                             font-weight: 500;
                             letter-spacing: 0.01em;
                         }
-                    
+
                         /* Dark mode */
                         @media (prefers-color-scheme: dark) {
                             .beeper-card {
@@ -1708,45 +1726,45 @@ Germany">Copy</button>
                                 border-color: rgba(126, 34, 206, 0.2);
                                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
                             }
-                    
+
                             .pro-link:hover .beeper-card {
                                 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
                                 border-color: rgba(126, 34, 206, 0.3);
                             }
-                    
+
                             .beeper-logo-container {
                                 background-color: rgba(255, 255, 255, 0.08);
                             }
-                    
+
                             .beeper-title {
                                 color: #f5f5f5;
                             }
-                    
+
                             .beeper-id {
                                 color: #bbb;
                                 background-color: rgba(255, 255, 255, 0.08);
                             }
-                    
+
                             .beeper-tagline {
                                 color: #4ade80;
                             }
                         }
-                    
+
                         /* Responsive adjustments */
                         @media (max-width: 480px) {
                             .beeper-card {
                                 padding: 16px;
                             }
-                    
+
                             .beeper-logo {
                                 width: 48px;
                                 height: 48px;
                             }
-                    
+
                             .beeper-title {
                                 font-size: 18px;
                             }
-                    
+
                             .beeper-id {
                                 font-size: 13px;
                             }
@@ -1755,8 +1773,11 @@ Germany">Copy</button>
                     <a href="https://matrix.to/#/@perguth:beeper.com" class="pro-link" rel="noopener noreferrer me">
                         <div class="beeper-card">
                             <div class="beeper-logo-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="beeper-logo">
-                                    <rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="#7e22ce" stroke="#7e22ce"></rect>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                                    class="beeper-logo">
+                                    <rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="#7e22ce"
+                                        stroke="#7e22ce"></rect>
                                     <circle cx="8" cy="10" r="1" fill="white"></circle>
                                     <circle cx="12" cy="10" r="1" fill="white"></circle>
                                     <circle cx="16" cy="10" r="1" fill="white"></circle>
@@ -1773,27 +1794,25 @@ Germany">Copy</button>
                         </div>
                     </a>
                 </div>
-    
+
                 <!-- Right Column - Other Social Links -->
                 <div class="social-column-right">
                     <div class="social-links">
-                        <a href="tel:+4971121724442" class="social-link" aria-label="Call"
-                            rel="noopener noreferrer me">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                    </path>
-                                </svg>
+                        <a href="tel:+4971121724442" class="social-link" aria-label="Call" rel="noopener noreferrer me">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
                             <span class="social-text">Call</span>
                         </a>
-                        
+
                         <a href="https://wa.me/+4971121724442" class="social-link" aria-label="WhatsApp Contact"
                             rel="noopener noreferrer me">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
-                                focusable="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true" focusable="false">
                                 <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9l-5.05.9"></path>
                                 <path
                                     d="M9 10a0.5.5 0 0 0 1 0v-1a0.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a0.5.5 0 0 0 0-1h-1a0.5.5 0 0 0 0 1">
@@ -1801,21 +1820,21 @@ Germany">Copy</button>
                             </svg>
                             <span class="social-text">WhatsApp</span>
                         </a>
-    
+
                         <a href="https://github.com/perguth" class="social-link" aria-label="GitHub Profile"
                             rel="noopener noreferrer me">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
-                                focusable="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true" focusable="false">
                                 <path
                                     d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0c-2.4-1.6-3.5-1.3-3.5-1.3a4.2 4.2 0 0 0-.1 3.2a4.6 4.6 0 0 0-1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2v3.5">
                                 </path>
                             </svg>
                             <span class="social-text">GitHub</span>
                         </a>
-    
-                        <a href="https://bsky.app/profile/perguth.d3v.ltd" class="social-link" aria-label="Bluesky Profile"
-                            rel="noopener noreferrer me">
+
+                        <a href="https://bsky.app/profile/perguth.d3v.ltd" class="social-link"
+                            aria-label="Bluesky Profile" rel="noopener noreferrer me">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 17.67">
                                 <path
                                     d="M4.524 1.468c2.216 1.664 4.6 5.038 5.476 6.849 0.875-1.811 3.259-5.185 5.476-6.849 1.599-1.201 4.19-2.13 4.19 0.826 0 0.59-0.338 4.96-0.537 5.669-0.69 2.466-3.205 3.095-5.442 2.714 3.91 0.666 4.905 2.87 2.757 5.074-4.08 4.186-5.864-1.05-6.321-2.392-0.084-0.246-0.123-0.361-0.124-0.263-0.001-0.098-0.04 0.017-0.124 0.263-0.457 1.342-2.241 6.578-6.321 2.392-2.148-2.204-1.153-4.408 2.757-5.074-2.237 0.381-4.752-0.248-5.442-2.714-0.199-0.709-0.537-5.079-0.537-5.669 0-2.956 2.591-2.027 4.19-0.826z"
@@ -1823,12 +1842,12 @@ Germany">Copy</button>
                             </svg>
                             <span class="social-text">Bluesky</span>
                         </a>
-    
+
                         <a href="https://perguth.de/pay" class="social-link" aria-label="Support My Work"
                             rel="noopener noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
-                                focusable="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true" focusable="false">
                                 <rect x="2" y="5" width="20" height="14" rx="2"></rect>
                                 <line x1="2" y1="10" x2="22" y2="10"></line>
                             </svg>
@@ -1837,22 +1856,21 @@ Germany">Copy</button>
 
                         <a href="https://perguth.de/meet" class="social-link" aria-label="Calendar"
                             rel="noopener noreferrer me">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                                </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
                             <span class="social-text">Calendar</span>
                         </a>
-    
+
                         <a href="https://www.linkedin.com/in/perguth/" class="social-link" aria-label="LinkedIn Profile"
                             rel="noopener noreferrer me">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
-                                focusable="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true" focusable="false">
                                 <rect x="4" y="4" width="16" height="16" rx="2"></rect>
                                 <line x1="8" y1="11" x2="8" y2="16"></line>
                                 <line x1="8" y1="8" x2="8" y2="8.01"></line>
@@ -1861,52 +1879,52 @@ Germany">Copy</button>
                             </svg>
                             <span class="social-text">LinkedIn</span>
                         </a>
-    
+
                         <a href="mailto:mail@perguth.de" class="social-link" aria-label="Send Email"
                             rel="noopener noreferrer me">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
-                                focusable="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true" focusable="false">
                                 <rect x="3" y="5" width="18" height="14" rx="2"></rect>
                                 <polyline points="3 7 12 13 21 7"></polyline>
                             </svg>
                             <span class="social-text">Email</span>
                         </a>
-    
-                        <a href="https://www.instagram.com/perguth.de" class="social-link" aria-label="Instagram Profile"
-                            rel="noopener noreferrer me">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
-                                focusable="false">
+
+                        <a href="https://www.instagram.com/perguth.de" class="social-link"
+                            aria-label="Instagram Profile" rel="noopener noreferrer me">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true" focusable="false">
                                 <rect x="4" y="4" width="16" height="16" rx="4"></rect>
                                 <circle cx="12" cy="12" r="3"></circle>
                                 <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
                             </svg>
                             <span class="social-text">Instagram</span>
                         </a>
-    
+
                         <a href="https://t.me/perguth" class="social-link" aria-label="Telegram Profile"
                             rel="noopener noreferrer me">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
-                                focusable="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true" focusable="false">
                                 <path d="M15 10l-4 4l6 6l4-16l-18 7l4 2l2 6l3-4"></path>
                             </svg>
                             <span class="social-text">Telegram</span>
                         </a>
-    
+
                         <a href="https://x.com/perguth" class="social-link" aria-label="X (Twitter) Profile"
                             rel="noopener noreferrer me">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
-                                focusable="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true" focusable="false">
                                 <path
                                     d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737s-2.643 2.06-2.62 3.737v1c-3.245.083-6.135-1.395-8-4c0 0-4.182 7.433 4 11c-1.872 1.247-3.739 2.088-6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c-.002-.249 1.51-2.772 1.818-4.013z">
                                 </path>
                             </svg>
                             <span class="social-text">X</span>
                         </a>
-    
+
                         <a href="https://chaos.social/@pguth" class="social-link" aria-label="Mastodon Profile"
                             rel="noopener noreferrer me">
                             <svg viewBox="-10 -5 1034 1034" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
@@ -1921,14 +1939,14 @@ Germany">Copy</button>
                 </div>
             </div>
         </div>
-    
+
         <div class="copyright">
             <p>
                 © 2025 Per Guth |
                 <a href="https://perguth.de/legacy" rel="noopener noreferrer me"
                     aria-label="The previous version of this web page"><b>Legacy</b></a> |
-                <a href="https://raw.githubusercontent.com/perguth/perguth.github.io/refs/heads/master/IMPRESSUM.txt" rel="noopener noreferrer"
-                    aria-label="View mandatory information (German law)">Imprint</a> |
+                <a href="https://raw.githubusercontent.com/perguth/perguth.github.io/refs/heads/master/IMPRESSUM.txt"
+                    rel="noopener noreferrer" aria-label="View mandatory information (German law)">Imprint</a> |
                 <a href="https://github.com/perguth/perguth.github.io" rel="noopener noreferrer me"
                     aria-label="View source code on GitHub">&lt;/src&gt;</a>
             </p>
@@ -2021,6 +2039,150 @@ Germany">Copy</button>
             });
         });
     </script>
+
+    <style>
+        /* Beeper Section Improvements */
+        .pro-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            margin: 0 auto;
+            min-width: 333px;
+            transition: transform 0.2s ease;
+        }
+
+        .beeper-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #f0f4ff;
+            /* Softer light blue for better readability */
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for depth */
+            border: 1px solid #d0d7e2;
+            /* Light blue-gray border for definition */
+            transition: all 0.3s ease;
+        }
+
+        .pro-link:hover .beeper-card {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            /* Slightly stronger shadow on hover */
+            border-color: #a3b1cc;
+            /* Darker border on hover */
+        }
+
+        .beeper-logo-container {
+            flex: 0 0 auto;
+            margin-right: 20px;
+            padding: 8px;
+            background-color: #ffffff;
+            /* White background for logo container */
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for depth */
+            transition: transform 0.3s ease;
+        }
+
+        .pro-link:hover .beeper-logo-container {
+            transform: scale(1.05);
+        }
+
+        .beeper-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            /* Darker text for better readability */
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+        }
+
+        .beeper-id {
+            font-size: 14px;
+            color: #4a4a4a;
+            /* Neutral gray for ID text */
+            margin-bottom: 10px;
+            font-family: monospace;
+            background-color: #e9eff9;
+            /* Light blue background for ID */
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            max-width: fit-content;
+        }
+
+        .beeper-tagline {
+            font-size: 15px;
+            color: #1d72b8;
+            /* Blue for tagline */
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+
+        /* Dark Mode Adjustments */
+        @media (prefers-color-scheme: dark) {
+            .beeper-card {
+                background-color: #1e1e2f;
+                /* Darker background for dark mode */
+                border-color: #3a3a5c;
+                /* Darker border for dark mode */
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+                /* Stronger shadow for dark mode */
+            }
+
+            .pro-link:hover .beeper-card {
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+                /* Stronger hover shadow */
+                border-color: #5a5a7c;
+                /* Darker hover border */
+            }
+
+            .beeper-logo-container {
+                background-color: #2a2a3f;
+                /* Darker background for logo container */
+            }
+
+            .beeper-title {
+                color: #f5f5f5;
+                /* Light text for dark mode */
+            }
+
+            .beeper-id {
+                color: #cccccc;
+                /* Light gray for ID text */
+                background-color: #3a3a5c;
+                /* Darker background for ID */
+            }
+
+            .beeper-tagline {
+                color: #4dade8;
+                /* Lighter blue for tagline */
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 480px) {
+            .beeper-card {
+                padding: 16px;
+            }
+
+            .beeper-logo {
+                width: 48px;
+                height: 48px;
+            }
+
+            .beeper-title {
+                font-size: 18px;
+            }
+
+            .beeper-id {
+                font-size: 13px;
+            }
+        }
+    </style>
 </body>
 
 </html>
