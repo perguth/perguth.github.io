@@ -783,7 +783,7 @@
                                     recentItems.forEach(item => {
                                         const title = item.querySelector('title').textContent;
                                         const link = item.querySelector('link').textContent;
-                                        tickerHTML += `&nbsp;| <a href="${link}" class="ticker-item" target="_blank" rel="noopener noreferrer">${title}</a>`;
+                                        tickerHTML += `<a href="#" class="ticker-item">&nbsp;|</a> <a href="${link}" class="ticker-item" target="_blank" rel="noopener noreferrer">${title}</a>`;
                                     });
 
                                     // Duplicate items to ensure smooth looping
@@ -869,18 +869,17 @@
                         <!-- D3velop.ltd -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/D3velop.jpg" alt="D3velop.ltd logo"
-                                    onerror="this.parentNode.innerHTML = 'D3'">
+                                <img src="/companies/D3velop.jpg" alt="D3velop.ltd logo" onerror="this.parentNode.innerHTML = 'D3'">
                             </div>
                             <div class="experience-header">
-                                <h3 class="job-title">Founding Partner</h3>
-                                <a href="https://d3v.ltd" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">𝗗𝟯𝘃elop.ltd</a>
-                                <p class="job-duration">Jan 2025 - Present · 4 mos</p>
+                                <h3 class="job-title">Partner</h3>
+                                <a href="https://d3v.ltd" class="company-name" target="_blank" rel="noopener noreferrer">𝗗𝟯𝘃elop.ltd</a>
+                                <p class="job-duration">Jan 2025 - Present · 5 mos</p>
+                                <p class="job-location">Seychelles</p>
                             </div>
                             <div class="job-description">
                                 <ul>
-                                    <li>Working with a digital innovation collective crafting B2B SaaS, IP & luxury
+                                    <li>Working with a digital innovation collective crafting B2B SaaS, IP &amp; luxury
                                         brands.</li>
                                 </ul>
                             </div>
@@ -894,14 +893,14 @@
                         <!-- Guth.global OÜ -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Guth.global.jpg" alt="Guth.global OÜ logo"
-                                    onerror="this.parentNode.innerHTML = 'GG'">
+                                <img src="/companies/Guth.global.jpg" alt="Guth.global OÜ logo" onerror="this.parentNode.innerHTML = 'GG'">
                             </div>
                             <div class="experience-header">
-                                <h3 class="job-title">Founder & Airbnb Superhost</h3>
-                                <a href="https://guth.global" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">Guth.global OÜ</a>
-                                <p class="job-duration">May 2023 - Present · 2 yrs</p>
+                                <h3 class="job-title">Founder &amp; Airbnb Superhost</h3>
+                                <a href="https://guth.global" class="company-name" target="_blank" rel="noopener noreferrer">Guth.global OÜ</a>
+                                <p class="job-duration">May 2023 - Present · 2 yrs 1 mo</p>
+                                <p class="job-location">Tallinn, Harjumaa, Estonia</p>
+                                <p class="job-type">Part-time</p>
                             </div>
                             <div class="job-description">
                                 <ul>
@@ -919,19 +918,17 @@
                         <!-- Thingylabs.io -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs.io logo"
-                                    onerror="this.parentNode.innerHTML = 'TL'">
+                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs.io logo" onerror="this.parentNode.innerHTML = 'TL'">
                             </div>
                             <div class="experience-header">
-                                <h3 class="job-title">Full-stack Engineer</h3>
-                                <a href="https://thingylabs.io" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">Thingylabs.io</a>
-                                <p class="job-duration">May 2022 - Present · 3 yrs</p>
+                                <h3 class="job-title">Partner</h3>
+                                <a href="https://thingylabs.io" class="company-name" target="_blank" rel="noopener noreferrer">Thingylabs.io</a>
+                                <p class="job-duration">Jan 2025 - Present · 5 mos</p>
                             </div>
                             <div class="job-description">
                                 <ul>
                                     <li>Co-founder of Pixelpilot.club (ergonomic gaming chairs) and Sternvoll.com
-                                        (silver & gold jewelry).</li>
+                                        (silver &amp; gold jewelry).</li>
                                     <li>Expertise in e-commerce, product development, international sourcing, and online
                                         sales.</li>
                                 </ul>
@@ -946,14 +943,13 @@
                         <!-- Managing Partner & Co-founder -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs.io logo"
-                                    onerror="this.parentNode.innerHTML = 'TL'">
+                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs.io logo" onerror="this.parentNode.innerHTML = 'TL'">
                             </div>
                             <div class="experience-header">
-                                <h3 class="job-title">Managing Partner & Co-founder</h3>
-                                <a href="https://thingylabs.io" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">Thingylabs.io</a>
+                                <h3 class="job-title">Managing Partner</h3>
+                                <a href="https://thingylabs.io" class="company-name" target="_blank" rel="noopener noreferrer">Thingylabs.io</a>
                                 <p class="job-duration">Jan 2017 - Dec 2024 · 8 yrs</p>
+                                <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
                             </div>
                             <div class="job-description">
                                 <ul>
@@ -968,47 +964,40 @@
                         <!-- Full-stack Engineer Thingylabs GmbH -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs GmbH logo"
-                                    onerror="this.parentNode.innerHTML = 'TL'">
+                                <img src="/companies/Thingylabs.jpg" alt="Thingylabs GmbH logo" onerror="this.parentNode.innerHTML = 'TL'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Full-stack Engineer</h3>
-                                <a href="https://thingylabs.io" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">Thingylabs GmbH</a>
-                                <p class="job-duration">2022 - 2023 · 1 yr</p>
+                                <a href="https://thingylabs.io" class="company-name" target="_blank" rel="noopener noreferrer">Thingylabs GmbH</a>
+                                <p class="job-duration">May 2022 - Apr 2023 · 1 yr</p>
                                 <p class="job-location">Germany</p>
+                                <p class="job-type">Part-time</p>
                             </div>
                             <div class="job-description">
                                 <ul>
-                                    <li>Engaged in diverse areas including testing, front-end, back-end development,
-                                        architecture, and orchestration, with a primary focus on enhancing key platform
-                                        features.</li>
+                                    <li>Co-founder of Pixelpilot.club (ergonomic gaming chairs) and Sternvoll.com
+                                        (silver &amp; gold jewelry).</li>
+                                    <li>Expertise in e-commerce, product development, international sourcing, and online
+                                        sales.</li>
                                 </ul>
                             </div>
                             <div class="skills-list">
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">React.js</span>
-                                <span class="skill-tag">Kubernetes</span>
-                                <span class="skill-tag">Cypress.io</span>
-                                <span class="skill-tag">PostgreSQL</span>
-                                <span class="skill-tag">TypeScript</span>
-                                <span class="skill-tag">Cloud</span>
-                                <span class="skill-tag">Full-Stack Development</span>
+                                <span class="skill-tag">Commercial Operation</span>
+                                <span class="skill-tag">Company Set-up</span>
+                                <span class="skill-tag">Brand Development</span>
                             </div>
                         </div>
 
                         <!-- PANTARIS by ETAS GmbH -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Bosch-Engineering.jpg" alt="ETAS GmbH logo"
-                                    onerror="this.parentNode.innerHTML = 'PE'">
+                                <img src="/companies/Bosch-Engineering.jpg" alt="ETAS GmbH logo" onerror="this.parentNode.innerHTML = 'PE'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Full-stack Engineer</h3>
-                                <a href="https://www.etas.com" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">PANTARIS by ETAS GmbH</a>
+                                <a href="https://www.etas.com" class="company-name" target="_blank" rel="noopener noreferrer">PANTARIS by ETAS GmbH</a>
                                 <p class="job-duration">Apr 2017 - Jan 2022 · 4 yrs 10 mos</p>
+                                <p class="job-location">Germany</p>
                             </div>
                             <div class="job-description">
                                 <ul>
@@ -1031,16 +1020,30 @@
                             </div>
                         </div>
 
+                        <!-- Guth.global Per Guth -->
+                        <div class="experience-item">
+                            <div class="company-logo">
+                                <img src="/companies/Guth.global.jpg" alt="Guth.global Per Guth logo" onerror="this.parentNode.innerHTML = 'GP'">
+                            </div>
+                            <div class="experience-header">
+                                <h3 class="job-title">Owner</h3>
+                                <a href="https://www.guth.global" class="company-name" target="_blank" rel="noopener noreferrer">Guth.global Per Guth</a>
+                                <p class="job-duration">May 2022 - May 2025 · 3 yrs 1 mo</p>
+                            </div>
+                            <div class="skills-list">
+                                <span class="skill-tag">Import Export</span>
+                                <span class="skill-tag">Internationalization</span>
+                            </div>
+                        </div>
+
                         <!-- Calponia by Bosch Engineering GmbH -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Bosch-Engineering.jpg" alt="Bosch Engineering GmbH logo"
-                                    onerror="this.parentNode.innerHTML = 'BE'">
+                                <img src="/companies/Bosch-Engineering.jpg" alt="Bosch Engineering GmbH logo" onerror="this.parentNode.innerHTML = 'BE'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Engineer</h3>
-                                <a href="https://www.bosch-engineering.com" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">Bosch Engineering GmbH</a>
+                                <a href="https://www.bosch-engineering.com" class="company-name" target="_blank" rel="noopener noreferrer">Bosch Engineering GmbH</a>
                                 <p class="job-duration">2018 - 2018 · Less than a year</p>
                                 <p class="job-location">Abstatt, Baden-Württemberg, Germany</p>
                             </div>
@@ -1061,13 +1064,11 @@
                         <!-- ARENA2036 -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Arena2036.jpg" alt="ARENA2036 logo"
-                                    onerror="this.parentNode.innerHTML = 'AR'">
+                                <img src="/companies/Arena2036.jpg" alt="ARENA2036 logo" onerror="this.parentNode.innerHTML = 'AR'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">IT Consultant</h3>
-                                <a href="https://www.arena2036.de" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">ARENA2036</a>
+                                <a href="https://www.arena2036.de" class="company-name" target="_blank" rel="noopener noreferrer">ARENA2036</a>
                                 <p class="job-duration">2016 - 2017 · 1 yr</p>
                                 <p class="job-location">Vaihingen an der Enz, Baden-Württemberg, Germany</p>
                             </div>
@@ -1089,13 +1090,11 @@
                         <!-- Rieber GmbH & Co. KG -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Rieber.jpg" alt="Rieber GmbH & Co. KG logo"
-                                    onerror="this.parentNode.innerHTML = 'RG'">
+                                <img src="/companies/Rieber.jpg" alt="Rieber GmbH &amp; Co. KG logo" onerror="this.parentNode.innerHTML = 'RG'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Software Developer</h3>
-                                <a href="https://www.rieber.de" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">Rieber GmbH & Co. KG</a>
+                                <a href="https://www.rieber.de" class="company-name" target="_blank" rel="noopener noreferrer">Rieber GmbH &amp; Co. KG</a>
                                 <p class="job-duration">2016 - 2017 · 1 yr</p>
                                 <p class="job-location">Reutlingen, Baden-Württemberg, Germany</p>
                             </div>
@@ -1115,13 +1114,11 @@
                         <!-- Exxeta GmbH -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/Exxeta.jpg" alt="Exxeta GmbH logo"
-                                    onerror="this.parentNode.innerHTML = 'EX'">
+                                <img src="/companies/Exxeta.jpg" alt="Exxeta GmbH logo" onerror="this.parentNode.innerHTML = 'EX'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Working Student</h3>
-                                <a href="https://www.exxeta.com" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">Exxeta GmbH</a>
+                                <a href="https://www.exxeta.com" class="company-name" target="_blank" rel="noopener noreferrer">Exxeta GmbH</a>
                                 <p class="job-duration">Aug 2016 - Oct 2016 · 3 mos</p>
                                 <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
                             </div>
@@ -1141,13 +1138,11 @@
                         <!-- University of Stuttgart Research Assistant 1 -->
                         <div class="experience-item">
                             <div class="company-logo">
-                                <img src="/companies/RewUS-Uni-Stuttgart.jpg" alt="University of Stuttgart IVR logo"
-                                    onerror="this.parentNode.innerHTML = 'IVR'">
+                                <img src="/companies/RewUS-Uni-Stuttgart.jpg" alt="University of Stuttgart IVR logo" onerror="this.parentNode.innerHTML = 'IVR'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Research Assistant</h3>
-                                <a href="https://ivr.uni-stuttgart.de" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">Institute of Economics and Law (IVR)</a>
+                                <a href="https://ivr.uni-stuttgart.de" class="company-name" target="_blank" rel="noopener noreferrer">Institute of Economics and Law (IVR)</a>
                                 <p class="job-subtitle">University of Stuttgart</p>
                                 <p class="job-duration">2014 - 2016 · 2 yrs</p>
                                 <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
@@ -1168,15 +1163,12 @@
 
                         <!-- University of Stuttgart Research Assistant 2 -->
                         <div class="experience-item">
-
                             <div class="company-logo">
-                                <img src="/companies/tik-Uni-Stuttgart.jpg" alt="TIK University of Stuttgart logo"
-                                    onerror="this.parentNode.innerHTML = 'TIK'">
+                                <img src="/companies/tik-Uni-Stuttgart.jpg" alt="TIK University of Stuttgart logo" onerror="this.parentNode.innerHTML = 'TIK'">
                             </div>
                             <div class="experience-header">
                                 <h3 class="job-title">Research Assistant</h3>
-                                <a href="https://tik.uni-stuttgart.de" class="company-name" target="_blank"
-                                    rel="noopener noreferrer">Technical Information and Communication Services (TIK)</a>
+                                <a href="https://tik.uni-stuttgart.de" class="company-name" target="_blank" rel="noopener noreferrer">Technical Information and Communication Services (TIK)</a>
                                 <p class="job-subtitle">University of Stuttgart</p>
                                 <p class="job-duration">2010 - 2014 · 4 yrs</p>
                                 <p class="job-location">Stuttgart, Baden-Württemberg, Germany</p>
@@ -1274,20 +1266,17 @@ Germany">Copy</button>
                             <p class="link-description">Project concepts and innovations</p>
                             <span class="link-url">perguth.de/ideas</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/perguth/" class="link-card" target="_blank"
-                            rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/perguth/" class="link-card" target="_blank" rel="noopener noreferrer">
                             <h3 class="link-title">LinkedIn</h3>
                             <p class="link-description">Professional profile and network</p>
                             <span class="link-url">linkedin.com/in/perguth</span>
                         </a>
-                        <a href="https://github.com/perguth" class="link-card" target="_blank"
-                            rel="noopener noreferrer">
+                        <a href="https://github.com/perguth" class="link-card" target="_blank" rel="noopener noreferrer">
                             <h3 class="link-title">Github</h3>
                             <p class="link-description">Open source projects and code</p>
                             <span class="link-url">github.com/perguth</span>
                         </a>
-                        <a href="https://bsky.app/profile/perguth.d3v.ltd" class="link-card" target="_blank"
-                            rel="noopener noreferrer">
+                        <a href="https://bsky.app/profile/perguth.d3v.ltd" class="link-card" target="_blank" rel="noopener noreferrer">
                             <h3 class="link-title">Bluesky</h3>
                             <p class="link-description">Professional updates and insights</p>
                             <span class="link-url">bsky.app/profile/perguth.d3v.ltd</span>
@@ -1303,7 +1292,7 @@ Germany">Copy</button>
 
             <section id="skills-section">
                 <div class="section-header">
-                    <h2 class="section-title">Skills & Expertise</h2>
+                    <h2 class="section-title">Skills &amp; Expertise</h2>
                     <button class="toggle-btn" data-target="skills-content">
                         Show Less
                     </button>
@@ -1341,6 +1330,8 @@ Germany">Copy</button>
                         <span class="skill-tag">Team Leadership</span>
                         <span class="skill-tag">Training</span>
                         <span class="skill-tag">Material Development</span>
+                        <span class="skill-tag">Import Export</span>
+                        <span class="skill-tag">Internationalization</span>
                     </div>
                 </div>
             </section>
@@ -2184,4 +2175,4 @@ Germany">Copy</button>
     </style>
 </body>
 
-</html>
+</html>cea25e6d681384c1509c243718d7ce436b38ab5b
