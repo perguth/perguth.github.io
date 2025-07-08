@@ -2,7 +2,7 @@
   "updates": [
     {
       "id": "whatsapp-mobile-fix",
-      "version": "1.1.0",
+      "version": "1.0.0",
       "date": "2025-01-08",
       "type": "fix",
       "message": "WhatsApp link has been fixed and now works correctly on mobile devices.",
