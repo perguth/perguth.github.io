@@ -2103,6 +2103,12 @@ Germany">Copy</button>
                     .then(newsData => {
                         const currentVersion = getCurrentVersion(newsData);
                         const lastSeenVersion = localStorage.getItem('last-seen-version');
+
+                        // Always show first news update for a while
+                        if (currentVersion === '1.0.0') {
+                            displayNews('1.0.0');
+                            return;
+                        }
                         
                         if (!lastSeenVersion) {
                             // First-time visitor - set current version and don't show news
