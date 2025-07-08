@@ -5,7 +5,7 @@
       "version": "1.0.0",
       "date": "2025-01-08",
       "type": "fix",
-      "message": "WhatsApp link has been fixed and now works correctly on mobile devices.",
+      "message": "Whatsapp link has been fixed and now works correctly on mobile devices.",
       "details": "Previously, the WhatsApp link only worked on desktop browsers. Now it properly opens the WhatsApp app on mobile devices using the wa.me format."
     }
   ]
