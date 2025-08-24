@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en-SC">
 
@@ -6,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>𝗣𝗲𝗿 𝗚𝘂𝘁𝗵 · Full-Stack Engineer · 𝐁𝐚𝐧𝐠𝐤𝐨𝐤, Shenzhen, Stuttgart</title>
     <meta name="description"
-        content="𝗣𝗲𝗿 𝗚𝘂𝘁𝗵 - 𝐒𝐜𝐚𝐥𝐚𝐛𝐥𝐞 𝐒𝐨𝐥𝐮𝐭𝐢𝐨𝐧𝐬 | Intersection between Dev, Ops & Legal">
+        content="𝗣𝗲𝗿 𝗚𝘂𝘁𝗵 · Dev, Ops & Legal">
 
-    <meta property="og:title" content="𝗣𝗲𝗿 𝗚𝘂𝘁𝗵 · Full-Stack Engineer">
+    <meta property="og:title" content="𝗣𝗲𝗿 𝗚𝘂𝘁𝗵">
     <meta property="og:description"
-        content="𝐒𝐜𝐚𝐥𝐚𝐛𝐥𝐞 𝐒𝐨𝐥𝐮𝐭𝐢𝐨𝐧𝐬 | Intersection between Dev, Ops & Legal">
+        content="Full-Stack Engineer · Dev, Ops & Legal">
     <meta property="og:image" content="https://perguth.de/img/og-image.png">
     <meta property="og:url" content="https://perguth.de">
 
@@ -690,6 +691,50 @@
             color: var(--text);
         }
 
+        /* Deprecated network styling */
+        .social-link.deprecated {
+            opacity: 0.6;
+            position: relative;
+        }
+
+        .social-link.deprecated:hover,
+        .social-link.deprecated:focus {
+            opacity: 1;
+        }
+
+        .social-link.deprecated::after {
+            content: "†";
+            position: absolute;
+            top: -0.5rem;
+            right: -0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footnote-marker {
+            font-size: 0.7rem;
+            vertical-align: super;
+            line-height: 0;
+        }
+
+        .footnotes {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-light);
+            text-align: left;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .footnote-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .footnote-backref {
+            text-decoration: none;
+            color: var(--accent);
+        }
+
         @media (max-width: 640px) {
             .container {
                 padding: 0 1rem;
@@ -949,7 +994,7 @@
                             </span>
                             Call
                         </a>
-                        <!-- <a href="https://wa.me/4971121724442" class="quick-link" target="_blank"
+                        <a href="https://api.whatsapp.com/send/?phone=%2B4971121724442" class="quick-link" target="_blank"
                             rel="noopener noreferrer me">
                             <span class="quick-link-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -961,7 +1006,7 @@
                                 </svg>
                             </span>
                             WhatsApp
-                        </a> -->
+                        </a>
                         <a href="https://perguth.de/meet" class="quick-link" target="_blank"
                             rel="noopener noreferrer me">
                             <span class="quick-link-icon">
@@ -1827,7 +1872,8 @@ Germany">Copy</button>
 
                         .beeper-id {
                             font-size: 14px;
-                            color: #4a4a4a;
+                            color: ```html
+a4a4a;
                             /* Neutral gray for ID text */
                             margin-bottom: 10px;
                             font-family: monospace;
@@ -1946,7 +1992,7 @@ Germany">Copy</button>
                             <span class="social-text">Call</span>
                         </a>
 
-                        <a href="https://wa.me/+4971121724442" class="social-link" aria-label="WhatsApp Contact"
+                        <a href="https://wa.me/+4971121724442" class="social-link deprecated" aria-label="WhatsApp Contact"
                             rel="noopener noreferrer me">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2029,8 +2075,8 @@ Germany">Copy</button>
                             <span class="social-text">Email</span>
                         </a>
 
-                        <a href="https://www.instagram.com/perguth.de" class="social-link"
-                            aria-label="Instagram Profile" rel="noopener noreferrer me">
+                        <a href="https://www.instagram.com/perguth.de" class="social-link deprecated" aria-label="Instagram Profile"
+                            rel="noopener noreferrer me">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                 aria-hidden="true" focusable="false">
@@ -2041,7 +2087,7 @@ Germany">Copy</button>
                             <span class="social-text">Instagram</span>
                         </a>
 
-                        <a href="https://t.me/perguth" class="social-link" aria-label="Telegram Profile"
+                        <a href="https://t.me/perguth" class="social-link deprecated" aria-label="Telegram Profile"
                             rel="noopener noreferrer me">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2051,7 +2097,7 @@ Germany">Copy</button>
                             <span class="social-text">Telegram</span>
                         </a>
 
-                        <a href="https://x.com/perguth" class="social-link" aria-label="X (Twitter) Profile"
+                        <a href="https://x.com/perguth" class="social-link deprecated" aria-label="X (Twitter) Profile"
                             rel="noopener noreferrer me">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2063,7 +2109,7 @@ Germany">Copy</button>
                             <span class="social-text">X</span>
                         </a>
 
-                        <a href="https://chaos.social/@pguth" class="social-link" aria-label="Mastodon Profile"
+                        <a href="https://chaos.social/@pguth" class="social-link deprecated" aria-label="Mastodon Profile"
                             rel="noopener noreferrer me">
                             <svg viewBox="-10 -5 1034 1034" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                                 focusable="false">
@@ -2073,6 +2119,13 @@ Germany">Copy</button>
                             </svg>
                             <span class="social-text">Mastodon</span>
                         </a>
+                    </div>
+                    
+                    <div class="footnotes">
+                        <div class="footnote-item">
+                            <sup><a href="#fn-ref-1" id="fn-1" class="footnote-backref">†</a></sup> 
+                            Message delivery on deprecated networks may be neither complete nor timely.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2317,3 +2370,4 @@ Germany">Copy</button>
 </body>
 
 </html>
+```
